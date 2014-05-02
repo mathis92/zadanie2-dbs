@@ -528,7 +528,7 @@ public class Mds_testDevicePanel extends javax.swing.JPanel {
             device.setTested(true);
             session.save(device);
             testing.setEndTime(new Timestamp(new Date().getTime()));
-            session.save(testing);
+            session.update(testing);
             session.getTransaction().commit();
             session.close();
 

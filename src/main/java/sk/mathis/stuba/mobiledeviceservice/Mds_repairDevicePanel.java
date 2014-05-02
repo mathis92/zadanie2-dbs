@@ -333,8 +333,9 @@ public class Mds_repairDevicePanel extends javax.swing.JPanel {
             MdsDevice device = (MdsDevice) session.get(MdsDevice.class, idRepairedDevice);
             device.setRepaired(true);
             session.update(device);
+            repairment.setEndTime(new Timestamp(new Date().getTime()));
             repairment.setRepairCosts(Double.parseDouble(repairCosts.getText()));
-            session.save(repairment);
+            session.update(repairment);
             costsOK = 1;
         } else {
             if (costsOK.equals(0)) {

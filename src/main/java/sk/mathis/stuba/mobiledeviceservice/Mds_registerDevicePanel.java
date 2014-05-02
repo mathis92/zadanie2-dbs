@@ -6,7 +6,7 @@
 package sk.mathis.stuba.mobiledeviceservice;
 
 import java.sql.Date;
-import sk.mathis.stuba.data.Mds_registerDeviceDataCollector;
+
 import sk.mathis.stuba.device.DeviceModel;
 import sk.mathis.stuba.equip.DataHelpers;
 import java.util.ArrayList;
@@ -339,14 +339,10 @@ public class Mds_registerDevicePanel extends javax.swing.JPanel {
                 session.getTransaction().commit();
                 session.close();
 
-                try {
-                    gui.updateOrderCount();
-                    gui.refreshListingPanel();
-                    gui.updateOrderCount();
-                } catch (SQLException ex) {
-                    Logger.getLogger(Mds_registerDevicePanel.class.getName()).log(Level.SEVERE, null, ex);
+                gui.updateOrderCount();
+                gui.refreshListingPanel();
+                gui.updateOrderCount();
 
-                }
             } else {
                 JOptionPane.showMessageDialog(this, "All arrays must be filled", "Notification !!!!", JOptionPane.WARNING_MESSAGE);
             }
@@ -461,7 +457,7 @@ public class Mds_registerDevicePanel extends javax.swing.JPanel {
         }
         session.getTransaction().commit();
         session.close();
-        
+
         String[] vendorString = new String[deviceVendorMap.size()];
         for (int i = 1; i <= deviceVendorMap.size(); i++) {
             vendorString[i - 1] = deviceVendorMap.get(i);

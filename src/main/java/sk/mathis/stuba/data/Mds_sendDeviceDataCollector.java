@@ -2,10 +2,21 @@ package sk.mathis.stuba.data;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.List;
+import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.table.DefaultTableModel;
+import org.hibernate.Criteria;
+import org.hibernate.Session;
+import org.hibernate.criterion.Restrictions;
 import sk.mathis.stuba.equip.DataHelpers;
+import sk.mathis.stuba.hibernatemapper.MdsDevice;
+import sk.mathis.stuba.hibernatemapper.MdsDiagnosis;
+import sk.mathis.stuba.hibernatemapper.MdsRepair;
+import sk.mathis.stuba.hibernatemapper.MdsServiceOrder;
+import sk.mathis.stuba.hibernatemapper.MdsTest;
+import sk.mathis.stuba.hibernatemapper.MdsTesting;
 import sk.mathis.stuba.mobiledeviceservice.Mds_sendDevicePanel;
 
 public class Mds_sendDeviceDataCollector {
@@ -22,34 +33,31 @@ public class Mds_sendDeviceDataCollector {
         DefaultTableModel devicesToSendTable;
 
         devicesToSendTable = (DefaultTableModel) sendPanel.getDevicesToSendTable().getModel();
-        try {
 
-            ResultSet rs = DataHelpers.selectFrom("SELECT id_device,imei,vendor,model,report FROM (SELECT mds_service_order.device_sent, mds_device.imei,mds_device_vendor.vendor,mds_device_model.model,mds_repair.report,mds_diagnosis.id_device,mds_device.repaired\n"
-                    + "	FROM mds_repair\n"
-                    + "	JOIN mds_diagnosis\n"
-                    + "	 ON mds_repair.id_diagnosis = mds_diagnosis.id_diagnosis\n"
-                    + "	JOIN mds_device\n"
-                    + "		ON mds_diagnosis.id_device = mds_device.id_device\n"
-                    + "	JOIN mds_service_order\n"
-                    + "		ON mds_service_order.id_device = mds_device.id_device\n"
-                    + "	JOIN mds_device_model\n"
-                    + "		ON mds_device.id_device_model = mds_device_model.id_device_model\n"
-                    + "	JOIN mds_device_vendor\n"
-                    + "	ON mds_device_model.id_device_vendor = mds_device_vendor.id_device_vendor) AS `table1`\n"
-                    + "WHERE table1.device_sent = 0");
-            while (rs.next()) {
-                for (int i = 0; i < 5; i++) {
-
-                    data[i] = rs.getString(i + 1);
+        Session session = DataHelpers.sessionFactory.openSession();
+        session.beginTransaction();
+        Criteria cr = session.createCriteria(MdsServiceOrder.class).add(Restrictions.eq("deviceSent", false));
+        List<MdsServiceOrder> deviceList = cr.list();
+        for (MdsServiceOrder temp : deviceList) {
+            data[0] = temp.getMdsDevice().getIdDevice();
+            data[2] = temp.getMdsDevice().getMdsDeviceModel().getMdsDeviceVendor().getVendor();
+            data[1] = temp.getMdsDevice().getImei();
+            data[3] = temp.getMdsDevice().getMdsDeviceModel().getModel();
+            for (MdsDiagnosis temp1 : (Set<MdsDiagnosis>) temp.getMdsDevice().getMdsDiagnosises()) {
+                if (temp1.getMdsDevice().equals(temp)) {
+                    for (MdsRepair temp2 : (Set<MdsRepair>) temp1.getMdsRepairs()) {
+                        if (temp2.getMdsDiagnosis().equals(temp1)) {
+                            data[4] = temp2.getReport();
+                        }
+                    }
                 }
-                devicesToSendTable.addRow(data);
-                sendPanel.getDevicesToSendTable().setModel(devicesToSendTable);
-
             }
-        } catch (SQLException ex) {
-            Logger.getLogger(Mds_findSpecificDeviceDataCollector.class
-                    .getName()).log(Level.SEVERE, null, ex);
+            devicesToSendTable.addRow(data);
+            sendPanel.getDevicesToSendTable().setModel(devicesToSendTable);
+
         }
+        session.getTransaction().commit();
+        session.close();
     }
 
     public void fillSelectedDeviceTable(Integer selectedRow) {
@@ -57,37 +65,36 @@ public class Mds_sendDeviceDataCollector {
         DefaultTableModel selectedDevice;
 
         selectedDevice = (DefaultTableModel) sendPanel.getSelectedDeviceTable().getModel();
-        try {
-            ResultSet rs = DataHelpers.selectFrom("SELECT id_device,imei,vendor,model,report FROM (SELECT mds_service_order.device_sent, mds_device.imei,mds_device_vendor.vendor,mds_device_model.model,mds_repair.report,mds_diagnosis.id_device,mds_device.repaired\n"
-                    + "	FROM mds_repair\n"
-                    + "	JOIN mds_diagnosis\n"
-                    + "	 ON mds_repair.id_diagnosis = mds_diagnosis.id_diagnosis\n"
-                    + "	JOIN mds_device\n"
-                    + "		ON mds_diagnosis.id_device = mds_device.id_device\n"
-                    + "	JOIN mds_service_order\n"
-                    + "		ON mds_service_order.id_device = mds_device.id_device\n"
-                    + "	JOIN mds_device_model\n"
-                    + "		ON mds_device.id_device_model = mds_device_model.id_device_model\n"
-                    + "	JOIN mds_device_vendor\n"
-                    + "	ON mds_device_model.id_device_vendor = mds_device_vendor.id_device_vendor) AS `table1`\n"
-                    + "WHERE table1.device_sent = 0;");
-            int j = 0;
-            while (rs.next()) {
-                if (selectedRow.equals(j)) {
-                    selectedDevice.setRowCount(0);
-                    for (int i = 0; i < 5; i++) {
-
-                        data[i] = rs.getString(i + 1);
+        selectedDevice.setRowCount(0);
+        Session session = DataHelpers.sessionFactory.openSession();
+        session.beginTransaction();
+        Criteria cr = session.createCriteria(MdsServiceOrder.class).add(Restrictions.eq("deviceSent", false));
+        List<MdsServiceOrder> deviceList = cr.list();
+        int i = 0;
+        for (MdsServiceOrder temp : deviceList) {
+            if (selectedRow.equals(i)) {
+                data[0] = temp.getMdsDevice().getIdDevice();
+                data[2] = temp.getMdsDevice().getMdsDeviceModel().getMdsDeviceVendor().getVendor();
+                data[1] = temp.getMdsDevice().getImei();
+                data[3] = temp.getMdsDevice().getMdsDeviceModel().getModel();
+                for (MdsDiagnosis temp1 : (Set<MdsDiagnosis>) temp.getMdsDevice().getMdsDiagnosises()) {
+                    if (temp1.getMdsDevice().equals(temp.getMdsDevice())) {
+                        for (MdsRepair temp2 : (Set<MdsRepair>) temp1.getMdsRepairs()) {
+                            if (temp2.getMdsDiagnosis().equals(temp1)) {
+                                data[4] = temp2.getReport();
+                                sendPanel.getReportTextArea().setText(temp2.getReport());
+                            }
+                        }
                     }
-                    selectedDevice.addRow(data);
-                    sendPanel.getSelectedDeviceTable().setModel(selectedDevice);
                 }
-                j++;
-
+                selectedDevice.addRow(data);
+                sendPanel.getSelectedDeviceTable().setModel(selectedDevice);
+                break;
             }
-        } catch (SQLException ex) {
-            Logger.getLogger(Mds_findSpecificDeviceDataCollector.class
-                    .getName()).log(Level.SEVERE, null, ex);
+            i++;
         }
+        session.getTransaction().commit();
+        session.close();
     }
+
 }

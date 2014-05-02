@@ -7,11 +7,17 @@ package sk.mathis.stuba.mobiledeviceservice;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.List;
 import java.util.Vector;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import org.hibernate.Session;
+import sk.mathis.stuba.device.ComboBoxItem;
 import sk.mathis.stuba.equip.DataHelpers;
+import sk.mathis.stuba.hibernatemapper.MdsDeviceModel;
+import sk.mathis.stuba.hibernatemapper.MdsDeviceVendor;
+import sk.mathis.stuba.hibernatemapper.MdsDiagnostician;
 
 /**
  *
@@ -28,16 +34,14 @@ public class Mds_editRepairableDevices extends javax.swing.JPanel {
     }
 
     public void setComboBox() {
-        ResultSet rs;
-        try {
-            rs = DataHelpers.selectFrom("SELECT vendor FROM mds_device_vendor");
-            Vector<String> vendors = new Vector<String>();
-            while (rs.next()) {
-                vendors.add(rs.getString(1));
-            }
-            vendorComboBox.setModel(new javax.swing.DefaultComboBoxModel(vendors));
-        } catch (SQLException ex) {
-            Logger.getLogger(Mds_editRepairableDevices.class.getName()).log(Level.SEVERE, null, ex);
+        Session session = DataHelpers.sessionFactory.openSession();
+        session.beginTransaction();
+        List<MdsDeviceVendor> vendorList = session.createCriteria(MdsDeviceVendor.class).list();
+        session.getTransaction().commit();
+        session.close();
+        vendorComboBox.removeAllItems();
+        for(MdsDeviceVendor temp : vendorList){
+            vendorComboBox.addItem(temp.getVendor());
         }
     }
 
@@ -167,11 +171,14 @@ public class Mds_editRepairableDevices extends javax.swing.JPanel {
 
     private void vendorButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_vendorButtonActionPerformed
         if (!addVendorField.getText().equalsIgnoreCase("")) {
-            try {
-                DataHelpers.insertInto("INSERT INTO `mds_device_vendor` (`vendor`) VALUES ('" + addVendorField.getText() + "');");
-            } catch (SQLException ex) {
-                Logger.getLogger(Mds_editRepairableDevices.class.getName()).log(Level.SEVERE, null, ex);
-            }
+            MdsDeviceVendor vendor = new MdsDeviceVendor();
+           
+            vendor.setVendor(addVendorField.getText());
+            Session session = DataHelpers.sessionFactory.openSession();
+            session.beginTransaction();
+            session.save(vendor);
+            session.getTransaction().commit();
+            session.close();
             addVendorField.setText("");
         } else {
             JOptionPane.showMessageDialog(this, "Field must be filled", "Notification !!!!", JOptionPane.WARNING_MESSAGE);
@@ -180,11 +187,16 @@ public class Mds_editRepairableDevices extends javax.swing.JPanel {
 
     private void modelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modelButtonActionPerformed
         if (!addModelField.getText().equalsIgnoreCase("")) {
-            try {
-                DataHelpers.insertInto("INSERT INTO mds_device_model (id_device_vendor,model) VALUES ('" + (vendorComboBox.getSelectedIndex() + 1) + "','" + addModelField.getText() + "')");
-            } catch (SQLException ex) {
-                Logger.getLogger(Mds_editRepairableDevices.class.getName()).log(Level.SEVERE, null, ex);
-            }
+            Session session = DataHelpers.sessionFactory.openSession();
+            session.beginTransaction();
+            MdsDeviceModel model = new MdsDeviceModel();
+            model.setModel(addModelField.getText());
+            MdsDeviceVendor vendor = (MdsDeviceVendor)session.get(MdsDeviceVendor.class, vendorComboBox.getSelectedIndex() + 1);
+            model.setMdsDeviceVendor(vendor);
+            System.out.println(model.getModel() + " " + model.getMdsDeviceVendor().getVendor());
+            session.save(model);
+            session.getTransaction().commit();
+            session.close();
             addModelField.setText("");
         } else {
             JOptionPane.showMessageDialog(this, "Field must be filled", "Notification !!!!", JOptionPane.WARNING_MESSAGE);
@@ -193,11 +205,15 @@ public class Mds_editRepairableDevices extends javax.swing.JPanel {
 
     private void diagButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_diagButtonActionPerformed
         if(!addDiagnosticianField.getText().equalsIgnoreCase("")){
-            try {
-                DataHelpers.insertInto("INSERT INTO mds_diagnostician (name) VALUES ('"+ addDiagnosticianField.getText() +"')");
-            } catch (SQLException ex) {
-                Logger.getLogger(Mds_editRepairableDevices.class.getName()).log(Level.SEVERE, null, ex);
-            }
+            MdsDiagnostician diagnostician = new MdsDiagnostician();
+           
+            diagnostician.setName(addDiagnosticianField.getText());
+            Session session = DataHelpers.sessionFactory.openSession();
+            session.beginTransaction();
+            session.save(diagnostician);
+            session.getTransaction().commit();
+            session.close();
+            
             addDiagnosticianField.setText("");
         }else { 
              JOptionPane.showMessageDialog(this, "Field must be filled", "Notification !!!!", JOptionPane.WARNING_MESSAGE);

@@ -14,16 +14,31 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Timestamp;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
+import javax.swing.JTextArea;
+import org.hibernate.Session;
+import org.hibernate.criterion.Restrictions;
 import sk.mathis.stuba.data.Mds_sendDeviceDataCollector;
 import sk.mathis.stuba.equip.DataHelpers;
 import sk.mathis.stuba.equip.Invoice;
+import sk.mathis.stuba.hibernatemapper.MdsDevice;
+import sk.mathis.stuba.hibernatemapper.MdsDiagnosis;
+import sk.mathis.stuba.hibernatemapper.MdsDiagnostician;
+import sk.mathis.stuba.hibernatemapper.MdsInvoice;
+import sk.mathis.stuba.hibernatemapper.MdsRepair;
+import sk.mathis.stuba.hibernatemapper.MdsSentDevices;
+import sk.mathis.stuba.hibernatemapper.MdsServiceOrder;
+
 
 public class Mds_sendDevicePanel extends javax.swing.JPanel {
 
@@ -32,6 +47,7 @@ public class Mds_sendDevicePanel extends javax.swing.JPanel {
     Long id_repair = null;
     Double id_repair_costs = null;
     private Integer deviceSent = 0;
+    private MdsRepair repair;
 
     public Mds_sendDevicePanel(Mds_mainGui gui) {
         initComponents();
@@ -205,21 +221,21 @@ public class Mds_sendDevicePanel extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
  public final void setDiagnosticianComboBox() {
         Map<Integer, String> diagnosticianMap = new HashMap<Integer, String>();
-        ResultSet rs;
-        try {
-            rs = DataHelpers.selectFrom("SELECT * FROM `mds_diagnostician`");
 
-            while (rs.next()) {
-                diagnosticianMap.put(rs.getInt(1), rs.getString(2));
-            }
-        } catch (SQLException ex) {
-            Logger.getLogger(Mds_testDevicePanel.class.getName()).log(Level.SEVERE, null, ex);
+        Session session = DataHelpers.sessionFactory.openSession();
+        session.beginTransaction();
+        List<MdsDiagnostician> mdsDiagnosticians = session.createCriteria(MdsDiagnostician.class).list();
+        session.getTransaction().commit();
+        session.close();
+        for (MdsDiagnostician temp : mdsDiagnosticians) {
+            diagnosticianMap.put(temp.getIdDiagnostician(), temp.getName());
         }
-        String[] vendorString = new String[diagnosticianMap.size()];
+
+        String[] diagnosticianString = new String[diagnosticianMap.size()];
         for (int i = 1; i <= diagnosticianMap.size(); i++) {
-            vendorString[i - 1] = diagnosticianMap.get(i);
+            diagnosticianString[i - 1] = diagnosticianMap.get(i);
         }
-        diagnosticianIdComboBox.setModel(new javax.swing.DefaultComboBoxModel(vendorString));
+        diagnosticianIdComboBox.setModel(new javax.swing.DefaultComboBoxModel(diagnosticianString));
     }
     private void cancelOperationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelOperationActionPerformed
         gui.getjTabbedPane1().remove(gui.getjTabbedPane1().getSelectedIndex());
@@ -230,67 +246,44 @@ public class Mds_sendDevicePanel extends javax.swing.JPanel {
 
     private void devicesToSendTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_devicesToSendTableMouseClicked
         collector.fillSelectedDeviceTable(devicesToSendTable.getSelectedRow());
-        ResultSet rs;
-        try {
-            rs = DataHelpers.selectFrom("SELECT report FROM (SELECT id_device,imei,vendor,model,report FROM (SELECT mds_service_order.device_sent, mds_device.imei,mds_device_vendor.vendor,mds_device_model.model,mds_repair.report,mds_diagnosis.id_device,mds_device.repaired\n"
-                    + "	FROM mds_repair\n"
-                    + "	JOIN mds_diagnosis\n"
-                    + "	 ON mds_repair.id_diagnosis = mds_diagnosis.id_diagnosis\n"
-                    + "	JOIN mds_device\n"
-                    + "		ON mds_diagnosis.id_device = mds_device.id_device\n"
-                    + "	JOIN mds_service_order\n"
-                    + "		ON mds_service_order.id_device = mds_device.id_device\n"
-                    + "	JOIN mds_device_model\n"
-                    + "		ON mds_device.id_device_model = mds_device_model.id_device_model\n"
-                    + "	JOIN mds_device_vendor\n"
-                    + "	ON mds_device_model.id_device_vendor = mds_device_vendor.id_device_vendor) AS `table1`\n"
-                    + "WHERE table1.device_sent = 0) AS `table2` \n"
-                    + "WHERE id_device = '" + devicesToSendTable.getValueAt(devicesToSendTable.getSelectedRow(), 0) + "'");
-            deviceSent = 1;
-            while (rs.next()) {
-                reportTextArea.setText(rs.getString(1));
-            }
-        } catch (SQLException ex) {
-            Logger.getLogger(Mds_repairDevicePanel.class.getName()).log(Level.SEVERE, null, ex);
-        }
+
     }//GEN-LAST:event_devicesToSendTableMouseClicked
 
     private void chooseDeviceToSendActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chooseDeviceToSendActionPerformed
         if (SelectedDeviceTable.getModel().getRowCount() > 0) {
-            ResultSet rs;
-            ArrayList<String> sendInfo = new ArrayList<String>();
-            ArrayList<String> invoiceData = new ArrayList<String>();
-            String idRepairedDevice = (String) SelectedDeviceTable.getModel().getValueAt(0, 0);
-            try {
-                rs = DataHelpers.selectFrom("SELECT id_repair,repair_costs FROM (SELECT mds_repair.id_repair, mds_repair.repair_costs, mds_diagnosis.id_device\n"
-                        + "	FROM mds_repair\n"
-                        + "	JOIN mds_diagnosis\n"
-                        + "		ON mds_diagnosis.id_diagnosis = mds_repair.id_diagnosis) AS `table1`\n"
-                        + "WHERE table1.id_device ='" + idRepairedDevice + "'");
-
-                while (rs.next()) {
-                    id_repair = rs.getLong(1);
-                    id_repair_costs = rs.getDouble(2);
+            Integer idRepairedDevice = (Integer) SelectedDeviceTable.getModel().getValueAt(0, 0);
+            Session session = DataHelpers.sessionFactory.openSession();
+            session.beginTransaction();
+            MdsDevice device = (MdsDevice) session.get(MdsDevice.class, idRepairedDevice);
+            for(MdsDiagnosis diagnosis : (Set<MdsDiagnosis>)device.getMdsDiagnosises()){
+                if(diagnosis.getMdsDevice().equals(device)){
+                    for(MdsRepair temp : (Set<MdsRepair>)diagnosis.getMdsRepairs()){
+                        if(temp.getMdsDiagnosis().equals(diagnosis)){
+                            repair = temp;
+                        }
+                    }
                 }
-            } catch (SQLException ex) {
-                Logger.getLogger(Mds_repairDevicePanel.class.getName()).log(Level.SEVERE, null, ex);
             }
-            sendInfo.add(id_repair.toString());
-            Integer diagId = diagnosticianIdComboBox.getSelectedIndex() + 1;
-            sendInfo.add(diagId.toString());
-            DataHelpers.insertFromArray(sendInfo, "mds_sent_devices", DataHelpers.mds_sent_devices);
-            System.out.println(idRepairedDevice);
-            DataHelpers.updateRow("UPDATE mds_service_order SET mds_service_order.device_sent = 1 WHERE mds_service_order.id_device ='" + idRepairedDevice + "'");
-            invoiceData.add(id_repair_costs.toString());
-            invoiceData.add(Integer.toString(diagnosticianIdComboBox.getSelectedIndex() + 1));
-            invoiceData.add(id_repair.toString());
+            MdsSentDevices sentDevice = new MdsSentDevices();
+            sentDevice.setMdsDiagnostician((MdsDiagnostician) session.get(MdsDiagnostician.class, (Integer) diagnosticianIdComboBox.getSelectedIndex() + 1));
+            System.out.println(repair.getReport());
+            sentDevice.setMdsRepair(repair);
+            sentDevice.setSentDate(new Timestamp(new Date().getTime()));
+            session.save(sentDevice);
+            MdsServiceOrder order = (MdsServiceOrder) session.createCriteria(MdsServiceOrder.class).add(Restrictions.eq("mdsDevice", device)).list().get(0);
+            order.setDeviceSent(true);
+            session.update(order);
+            MdsInvoice invoice = new MdsInvoice();
+            invoice.setPrice(repair.getRepairCosts());
+            invoice.setMdsDiagnostician((MdsDiagnostician) session.get(MdsDiagnostician.class, (Integer) diagnosticianIdComboBox.getSelectedIndex() + 1));
+            invoice.setMdsRepair(repair);
+            invoice.setDate(new Timestamp(new Date().getTime()));
+            session.save(invoice);
+            session.getTransaction().commit();
+            session.close();
+            deviceSent = 1;
             gui.refreshListingPanel();
-            try {
-                gui.updateOrderCount();
-            } catch (SQLException ex) {
-                Logger.getLogger(Mds_sendDevicePanel.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            DataHelpers.insertFromArray(invoiceData, "mds_invoice", DataHelpers.mds_invoice);
+            gui.updateOrderCount();
             chooseDeviceToSend.setVisible(false);
         } else {
             JOptionPane.showMessageDialog(this, "You have to choose device to send !", "Notification !!!!", JOptionPane.WARNING_MESSAGE);
@@ -301,7 +294,7 @@ public class Mds_sendDevicePanel extends javax.swing.JPanel {
         if (deviceSent.equals(1)) {
             Invoice inv = new Invoice();
             try {
-                inv.createPdf((Integer) id_repair.intValue());
+                inv.createPdf(repair);
             } catch (DocumentException ex) {
                 Logger.getLogger(Mds_sendDevicePanel.class.getName()).log(Level.SEVERE, null, ex);
             } catch (FileNotFoundException ex) {
@@ -311,7 +304,7 @@ public class Mds_sendDevicePanel extends javax.swing.JPanel {
             } catch (InterruptedException ex) {
                 Logger.getLogger(Mds_sendDevicePanel.class.getName()).log(Level.SEVERE, null, ex);
             }
-          
+
             gui.getjTabbedPane1().remove(gui.getjTabbedPane1().getSelectedIndex());
             gui.getjTabbedPane1().setSelectedIndex(0);
             gui.remove(gui.sendDevicePanel);
@@ -327,6 +320,10 @@ public class Mds_sendDevicePanel extends javax.swing.JPanel {
 
     public JTable getSelectedDeviceTable() {
         return SelectedDeviceTable;
+    }
+
+    public JTextArea getReportTextArea() {
+        return reportTextArea;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

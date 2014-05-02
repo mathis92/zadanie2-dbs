@@ -25,6 +25,8 @@ import sk.mathis.stuba.equip.TestTypes;
 import sk.mathis.stuba.hibernatemapper.MdsDevice;
 import sk.mathis.stuba.hibernatemapper.MdsDiagnosis;
 import sk.mathis.stuba.hibernatemapper.MdsDiagnostician;
+import sk.mathis.stuba.hibernatemapper.MdsRepair;
+import sk.mathis.stuba.hibernatemapper.MdsServiceOrder;
 import sk.mathis.stuba.hibernatemapper.MdsTest;
 import sk.mathis.stuba.hibernatemapper.MdsTesting;
 import sk.mathis.stuba.mobiledeviceservice.Mds_testDevicePanel;
@@ -107,19 +109,10 @@ public class Mds_testDeviceDataCollector {
                 data[1] = temp.getImei();
                 data[3] = temp.getMdsDeviceModel().getMdsDeviceVendor().getVendor();
                 data[2] = temp.getMdsDeviceModel().getModel();
-                for (MdsTesting temp1 : (Set<MdsTesting>) temp.getMdsTestings()) {
-                    if (temp1.getMdsDevice().equals(temp)) {
-                        for (MdsTest temp2 : (Set<MdsTest>) temp1.getMdsTests()) {
-                            if (temp2.getMdsTesting().equals(temp1)) {
-                                data[4] = temp2.getFoundFault();
-                                testPanel.getFaultTextArea().setText(temp2.getFoundFault());
-                            }
-                        }
-                    }
-                }
+                data[4] = ((MdsServiceOrder) session.createCriteria(MdsServiceOrder.class).add(Restrictions.eq("mdsDevice", temp)).list().get(0)).getFaultDescription();
+                testPanel.getFaultTextArea().setText(((MdsServiceOrder) session.createCriteria(MdsServiceOrder.class).add(Restrictions.eq("mdsDevice", temp)).list().get(0)).getFaultDescription());
                 selectedDevice.addRow(data);
                 testPanel.getSelectedDeviceTable().setModel(selectedDevice);
-
             }
             i++;
         }
@@ -132,33 +125,24 @@ public class Mds_testDeviceDataCollector {
         DefaultTableModel devicesToTestTable;
 
         devicesToTestTable = (DefaultTableModel) testPanel.getDevicesToTestTable().getModel();
-        
+
         Session session = DataHelpers.sessionFactory.openSession();
         session.beginTransaction();
         Criteria cr = session.createCriteria(MdsDevice.class).add(Restrictions.eq("tested", false));
         List<MdsDevice> deviceList = cr.list();
-        int i = 0;
         for (MdsDevice temp : deviceList) {
-                data[0] = temp.getIdDevice();
-                data[1] = temp.getImei();
-                data[3] = temp.getMdsDeviceModel().getMdsDeviceVendor().getVendor();
-                data[2] = temp.getMdsDeviceModel().getModel();
-                for (MdsTesting temp1 : (Set<MdsTesting>) temp.getMdsTestings()) {
-                    if (temp1.getMdsDevice().equals(temp)) {
-                        for (MdsTest temp2 : (Set<MdsTest>) temp1.getMdsTests()) {
-                            if (temp2.getMdsTesting().equals(temp1)) {
-                                data[4] = temp2.getFoundFault();
-                                testPanel.getFaultTextArea().setText(temp2.getFoundFault());
-                            }
-                        }
-                    }
-                }
-                devicesToTestTable.addRow(data);
-                testPanel.getDevicesToTestTable().setModel(devicesToTestTable);
+            data[0] = temp.getIdDevice();
+            data[1] = temp.getImei();
+            data[3] = temp.getMdsDeviceModel().getMdsDeviceVendor().getVendor();
+            data[2] = temp.getMdsDeviceModel().getModel();
+
+            data[4] = ((MdsServiceOrder) session.createCriteria(MdsServiceOrder.class).add(Restrictions.eq("mdsDevice", temp)).list().get(0)).getFaultDescription();
+            devicesToTestTable.addRow(data);
+            testPanel.getDevicesToTestTable().setModel(devicesToTestTable);
 
         }
         session.getTransaction().commit();
         session.close();
-        
+
     }
 }

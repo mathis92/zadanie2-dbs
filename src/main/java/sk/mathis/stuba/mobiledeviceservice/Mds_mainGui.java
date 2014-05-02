@@ -43,11 +43,7 @@ public class Mds_mainGui extends javax.swing.JFrame {
         jTabbedPane1.addTab("All devices listing", listingPanel);
         jTabbedPane1.setSelectedIndex(0);
         listingPanel.fillListingTable();
-        try {
-            updateOrderCount();
-        } catch (SQLException ex) {
-            Logger.getLogger(Mds_mainGui.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        updateOrderCount();
 
     }
 
@@ -299,7 +295,7 @@ public class Mds_mainGui extends javax.swing.JFrame {
         return jTabbedPane1;
     }
 
-    public void updateOrderCount() throws SQLException {
+    public void updateOrderCount() {
         Session session = DataHelpers.sessionFactory.openSession();
         session.beginTransaction();
         Criteria cr = session.createCriteria(MdsServiceOrder.class);
