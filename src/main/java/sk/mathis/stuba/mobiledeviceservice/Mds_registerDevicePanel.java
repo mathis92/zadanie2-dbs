@@ -20,9 +20,12 @@ import java.util.Map;
 import java.util.Vector;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.ComboBoxModel;
+import javax.swing.DefaultComboBoxModel;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.criterion.Restrictions;
+import sk.mathis.stuba.device.ComboBoxItem;
 import static sk.mathis.stuba.equip.DataHelpers.conn;
 import sk.mathis.stuba.hibernatemapper.MdsDevice;
 import sk.mathis.stuba.hibernatemapper.MdsDeviceModel;
@@ -48,14 +51,14 @@ public class Mds_registerDevicePanel extends javax.swing.JPanel {
     public Mds_registerDevicePanel(Mds_mainGui gui) throws SQLException {
         this.gui = gui;
         initComponents();
-        setComboBoxes();
+
         jRegisterDeviceButton.setEnabled(false);
         jDeviceFault.setEnabled(false);
         jDeviceIMEI.setEnabled(false);
         jDeviceModelComboBox.setEnabled(false);
         jDeviceTypeComboBox.setEnabled(false);
         jDeviceVendorComboBox.setEnabled(false);
-        //   DatabaseConnector con = new DatabaseConnector();
+        setComboBoxes();
     }
 
     /**
@@ -146,14 +149,11 @@ public class Mds_registerDevicePanel extends javax.swing.JPanel {
             }
         });
 
-        jDeviceVendorComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         jDeviceVendorComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jDeviceVendorComboBoxActionPerformed(evt);
             }
         });
-
-        jDeviceModelComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         cancelOperation.setText("Cancel operation");
         cancelOperation.addActionListener(new java.awt.event.ActionListener() {
@@ -312,7 +312,7 @@ public class Mds_registerDevicePanel extends javax.swing.JPanel {
                 device.setMdsDeviceModel(null);
                 Session session = DataHelpers.sessionFactory.openSession();
                 session.beginTransaction();
-                MdsDeviceModel deviceModel = (MdsDeviceModel) session.get(MdsDeviceModel.class, Integer.parseInt(deviceModelMapString.get((String) jDeviceModelComboBox.getSelectedItem()).getModelId().toString()));
+                MdsDeviceModel deviceModel = (MdsDeviceModel) session.get(MdsDeviceModel.class, ((ComboBoxItem) jDeviceModelComboBox.getSelectedItem()).getId());
                 device.setMdsDeviceModel(deviceModel);
 
                 session.save(device);
@@ -418,66 +418,64 @@ public class Mds_registerDevicePanel extends javax.swing.JPanel {
 
     private void cancelOperationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelOperationActionPerformed
         if (claimantRegistered.equals(1)) {
-            try {
-                DataHelpers.deleteRow("DELETE  FROM mds_service_claimant WHERE id_service_claimant ='" + newClaimant + "'");
-            } catch (SQLException ex) {
-                System.out.println(ex.getMessage());
-                Logger
-                        .getLogger(Mds_registerDevicePanel.class
-                                .getName()).log(Level.SEVERE, null, ex);
-            }
+            Session session = DataHelpers.sessionFactory.openSession();
+            session.beginTransaction();
+            session.delete(newClaimant);
+            session.getTransaction().commit();
+            session.close();
         }
         gui.getjTabbedPane1().remove(gui.getjTabbedPane1().getSelectedIndex());
         gui.getjTabbedPane1().setSelectedIndex(0);
         gui.remove(gui.registerDevicePanel);
         gui.registerDevicePanel = null;
     }//GEN-LAST:event_cancelOperationActionPerformed
-    public void setComboBoxes() throws SQLException {
+    public void setComboBoxes() {
         jClaimantLegalTypeComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[]{"person", "freelancer", "company"}));
         jDeviceTypeComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[]{"phone", "tablet", "camera"}));
         deviceVendorMap = new HashMap();
         deviceModelMap = new HashMap();
-        deviceModelMapString = new HashMap<String, DeviceModel>();
 
         //ResultSet rs = DataHelpers.selectFrom("SELECT * FROM `mds_device_model`");
         Session session = DataHelpers.sessionFactory.openSession();
         session.beginTransaction();
+
         List<MdsDeviceModel> deviceModelList = session.createCriteria(MdsDeviceModel.class).list();
 
         for (MdsDeviceModel temp : deviceModelList) {
             deviceModelMap.put(temp.getIdDeviceModel(), new DeviceModel(temp));
-            deviceModelMapString.put(temp.getModel(), new DeviceModel(temp));
         }
-        session.getTransaction().commit();
-        session.beginTransaction();
 
         List<MdsDeviceVendor> deviceVendorList = session.createCriteria(MdsDeviceVendor.class).list();
+
         for (MdsDeviceVendor temp : deviceVendorList) {
-            deviceVendorMap.put(temp.getIdDeviceVendor(), temp.getVendor());
+
+            jDeviceVendorComboBox.addItem(new ComboBoxItem(temp.getVendor(), temp.getIdDeviceVendor()));
         }
+
         session.getTransaction().commit();
         session.close();
 
-        String[] vendorString = new String[deviceVendorMap.size()];
-        for (int i = 1; i <= deviceVendorMap.size(); i++) {
-            vendorString[i - 1] = deviceVendorMap.get(i);
-        }
-        jDeviceVendorComboBox.setModel(new javax.swing.DefaultComboBoxModel(vendorString));
         changeModelBox();
     }
 
     public void changeModelBox() {
 
-        Integer index = jDeviceVendorComboBox.getSelectedIndex() + 1;
+        Integer index = ((ComboBoxItem) jDeviceVendorComboBox.getSelectedItem()).getId();
         System.out.println(index);
-        Vector<String> modelList = new Vector<String>();
-        for (int i = 0; i < deviceModelMap.size(); i++) {
-            System.out.println(i + 1 + " " + deviceModelMap.get(i + 1).getModelVendor().getIdDeviceVendor());
-            if (deviceModelMap.get(i + 1).getModelVendor().getIdDeviceVendor().equals(index)) {
-                modelList.add(deviceModelMap.get(i + 1).getModelName());
-            }
+
+        Session session = DataHelpers.sessionFactory.openSession();
+        session.beginTransaction();
+        MdsDeviceVendor vendor = (MdsDeviceVendor) session.get(MdsDeviceVendor.class, index);
+        List<MdsDeviceModel> deviceModelList = session.createCriteria(MdsDeviceModel.class).add(Restrictions.eq("mdsDeviceVendor", vendor)).list();
+        jDeviceModelComboBox.removeAllItems();
+        ArrayList<ComboBoxItem> cbm = new ArrayList<>();
+        for (MdsDeviceModel model : deviceModelList) {
+            cbm.add(new ComboBoxItem(model.getModel(), model.getIdDeviceModel()));
         }
-        jDeviceModelComboBox.setModel(new javax.swing.DefaultComboBoxModel(modelList));
+                ComboBoxModel<ComboBoxItem> cBmodel = new DefaultComboBoxModel<>(cbm.toArray(new ComboBoxItem[cbm.size()]));
+                jDeviceModelComboBox.setModel(cBmodel);
+        session.getTransaction().commit();
+        session.close();
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

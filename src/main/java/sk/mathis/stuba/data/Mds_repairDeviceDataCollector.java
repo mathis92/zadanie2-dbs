@@ -33,7 +33,7 @@ public class Mds_repairDeviceDataCollector {
 
         Session session = DataHelpers.sessionFactory.openSession();
         session.beginTransaction();
-        Criteria cr = session.createCriteria(MdsDevice.class).add(Restrictions.eq("repaired", false));
+        Criteria cr = session.createCriteria(MdsDevice.class).add(Restrictions.eq("tested", true)).add(Restrictions.eq("repaired", false));
         List<MdsDevice> deviceList = cr.list();
         for (MdsDevice temp : deviceList) {
             data[0] = temp.getIdDevice();
@@ -61,7 +61,7 @@ public class Mds_repairDeviceDataCollector {
 
         Session session = DataHelpers.sessionFactory.openSession();
         session.beginTransaction();
-        Criteria cr = session.createCriteria(MdsDevice.class).add(Restrictions.eq("repaired", false));
+        Criteria cr = session.createCriteria(MdsDevice.class).add(Restrictions.eq("tested", true)).add(Restrictions.eq("repaired", false));
         List<MdsDevice> deviceList = cr.list();
         int i = 0;
         for (MdsDevice temp : deviceList) {

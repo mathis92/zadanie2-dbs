@@ -2,6 +2,7 @@ package sk.mathis.stuba.data;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 import java.util.logging.Level;
@@ -36,15 +37,22 @@ public class Mds_sendDeviceDataCollector {
 
         Session session = DataHelpers.sessionFactory.openSession();
         session.beginTransaction();
+        List<MdsDevice> devList = session.createCriteria(MdsDevice.class).add(Restrictions.eq("repaired", true)).add(Restrictions.eq("tested", true)).list();
         Criteria cr = session.createCriteria(MdsServiceOrder.class).add(Restrictions.eq("deviceSent", false));
         List<MdsServiceOrder> deviceList = cr.list();
-        for (MdsServiceOrder temp : deviceList) {
+        List<MdsServiceOrder> list = new ArrayList<>();
+        for(MdsServiceOrder temp : deviceList){
+            if(devList.contains(temp.getMdsDevice())){
+                list.add(temp);
+            }
+        }
+        for (MdsServiceOrder temp : list) {
             data[0] = temp.getMdsDevice().getIdDevice();
             data[2] = temp.getMdsDevice().getMdsDeviceModel().getMdsDeviceVendor().getVendor();
             data[1] = temp.getMdsDevice().getImei();
             data[3] = temp.getMdsDevice().getMdsDeviceModel().getModel();
             for (MdsDiagnosis temp1 : (Set<MdsDiagnosis>) temp.getMdsDevice().getMdsDiagnosises()) {
-                if (temp1.getMdsDevice().equals(temp)) {
+                if (temp1.getMdsDevice().equals(temp.getMdsDevice())) {
                     for (MdsRepair temp2 : (Set<MdsRepair>) temp1.getMdsRepairs()) {
                         if (temp2.getMdsDiagnosis().equals(temp1)) {
                             data[4] = temp2.getReport();
@@ -68,10 +76,18 @@ public class Mds_sendDeviceDataCollector {
         selectedDevice.setRowCount(0);
         Session session = DataHelpers.sessionFactory.openSession();
         session.beginTransaction();
+        List<MdsDevice> devList = session.createCriteria(MdsDevice.class).add(Restrictions.eq("repaired", true)).add(Restrictions.eq("tested", true)).list();
         Criteria cr = session.createCriteria(MdsServiceOrder.class).add(Restrictions.eq("deviceSent", false));
         List<MdsServiceOrder> deviceList = cr.list();
+        List<MdsServiceOrder> list = new ArrayList<>();
+        for(MdsServiceOrder temp : deviceList){
+            if(devList.contains(temp.getMdsDevice())){
+                list.add(temp);
+            }
+        }
+        
         int i = 0;
-        for (MdsServiceOrder temp : deviceList) {
+        for (MdsServiceOrder temp : list) {
             if (selectedRow.equals(i)) {
                 data[0] = temp.getMdsDevice().getIdDevice();
                 data[2] = temp.getMdsDevice().getMdsDeviceModel().getMdsDeviceVendor().getVendor();
@@ -79,8 +95,10 @@ public class Mds_sendDeviceDataCollector {
                 data[3] = temp.getMdsDevice().getMdsDeviceModel().getModel();
                 for (MdsDiagnosis temp1 : (Set<MdsDiagnosis>) temp.getMdsDevice().getMdsDiagnosises()) {
                     if (temp1.getMdsDevice().equals(temp.getMdsDevice())) {
+                        System.out.println("sems");
                         for (MdsRepair temp2 : (Set<MdsRepair>) temp1.getMdsRepairs()) {
                             if (temp2.getMdsDiagnosis().equals(temp1)) {
+                                System.out.println("sems+");
                                 data[4] = temp2.getReport();
                                 sendPanel.getReportTextArea().setText(temp2.getReport());
                             }

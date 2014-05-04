@@ -316,7 +316,7 @@ public class Mds_findSpecificDevicePanel extends javax.swing.JPanel {
 
     private void jDeviceDataMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jDeviceDataMouseClicked
         Mds_fullListingPanel listingPanel = new Mds_fullListingPanel(gui);
-        listingPanel.fillData( (Integer)(Integer.parseInt((String)jDeviceData.getValueAt(jDeviceData.getSelectedRow(), 0))));
+        listingPanel.fillData((Integer)jDeviceData.getValueAt(jDeviceData.getSelectedRow(), 0));
         jDialog1.setContentPane(listingPanel);
         jDialog1.setSize(1100, 680);
         jDialog1.setEnabled(true);

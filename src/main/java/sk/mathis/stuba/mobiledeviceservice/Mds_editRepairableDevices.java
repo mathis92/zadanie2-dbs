@@ -40,8 +40,10 @@ public class Mds_editRepairableDevices extends javax.swing.JPanel {
         session.getTransaction().commit();
         session.close();
         vendorComboBox.removeAllItems();
-        for(MdsDeviceVendor temp : vendorList){
-            vendorComboBox.addItem(temp.getVendor());
+        vendorCbox.removeAllItems();
+        for (MdsDeviceVendor temp : vendorList) {
+            vendorComboBox.addItem(new ComboBoxItem(temp.getVendor(),temp.getIdDeviceVendor()));
+            vendorCbox.addItem(new ComboBoxItem(temp.getVendor(),temp.getIdDeviceVendor()));
         }
     }
 
@@ -61,6 +63,9 @@ public class Mds_editRepairableDevices extends javax.swing.JPanel {
         modelButton = new javax.swing.JButton();
         vendorButton = new javax.swing.JButton();
         diagButton = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
+        vendorCbox = new javax.swing.JComboBox();
+        deleteVendorButton = new javax.swing.JButton();
 
         setMinimumSize(new java.awt.Dimension(1100, 650));
 
@@ -102,6 +107,17 @@ public class Mds_editRepairableDevices extends javax.swing.JPanel {
             }
         });
 
+        jLabel5.setText("Delete Vendor");
+
+        vendorCbox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        deleteVendorButton.setText("Delete Vendor");
+        deleteVendorButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                deleteVendorButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -116,14 +132,18 @@ public class Mds_editRepairableDevices extends javax.swing.JPanel {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(vendorComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jLabel3)
-                            .addComponent(jLabel1))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(addVendorField, javax.swing.GroupLayout.DEFAULT_SIZE, 133, Short.MAX_VALUE)
-                            .addComponent(addModelField)
-                            .addComponent(addDiagnosticianField))
+                            .addComponent(jLabel1)
+                            .addComponent(jLabel5))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(addVendorField, javax.swing.GroupLayout.DEFAULT_SIZE, 133, Short.MAX_VALUE)
+                                .addComponent(addModelField)
+                                .addComponent(addDiagnosticianField))
+                            .addComponent(vendorCbox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(deleteVendorButton)
                             .addComponent(vendorButton)
                             .addComponent(modelButton)
                             .addComponent(diagButton))
@@ -158,7 +178,12 @@ public class Mds_editRepairableDevices extends javax.swing.JPanel {
                     .addComponent(jLabel3)
                     .addComponent(addDiagnosticianField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(diagButton, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(493, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5)
+                    .addComponent(vendorCbox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(deleteVendorButton))
+                .addContainerGap(452, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -172,7 +197,7 @@ public class Mds_editRepairableDevices extends javax.swing.JPanel {
     private void vendorButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_vendorButtonActionPerformed
         if (!addVendorField.getText().equalsIgnoreCase("")) {
             MdsDeviceVendor vendor = new MdsDeviceVendor();
-           
+
             vendor.setVendor(addVendorField.getText());
             Session session = DataHelpers.sessionFactory.openSession();
             session.beginTransaction();
@@ -180,6 +205,7 @@ public class Mds_editRepairableDevices extends javax.swing.JPanel {
             session.getTransaction().commit();
             session.close();
             addVendorField.setText("");
+            setComboBox();
         } else {
             JOptionPane.showMessageDialog(this, "Field must be filled", "Notification !!!!", JOptionPane.WARNING_MESSAGE);
         }
@@ -191,35 +217,47 @@ public class Mds_editRepairableDevices extends javax.swing.JPanel {
             session.beginTransaction();
             MdsDeviceModel model = new MdsDeviceModel();
             model.setModel(addModelField.getText());
-            MdsDeviceVendor vendor = (MdsDeviceVendor)session.get(MdsDeviceVendor.class, vendorComboBox.getSelectedIndex() + 1);
+            MdsDeviceVendor vendor = (MdsDeviceVendor) session.get(MdsDeviceVendor.class, ((ComboBoxItem)vendorComboBox.getSelectedItem()).getId());
             model.setMdsDeviceVendor(vendor);
             System.out.println(model.getModel() + " " + model.getMdsDeviceVendor().getVendor());
             session.save(model);
             session.getTransaction().commit();
             session.close();
             addModelField.setText("");
+            setComboBox();
         } else {
             JOptionPane.showMessageDialog(this, "Field must be filled", "Notification !!!!", JOptionPane.WARNING_MESSAGE);
         }
     }//GEN-LAST:event_modelButtonActionPerformed
 
     private void diagButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_diagButtonActionPerformed
-        if(!addDiagnosticianField.getText().equalsIgnoreCase("")){
+        if (!addDiagnosticianField.getText().equalsIgnoreCase("")) {
             MdsDiagnostician diagnostician = new MdsDiagnostician();
-           
+
             diagnostician.setName(addDiagnosticianField.getText());
             Session session = DataHelpers.sessionFactory.openSession();
             session.beginTransaction();
             session.save(diagnostician);
             session.getTransaction().commit();
             session.close();
-            
+
             addDiagnosticianField.setText("");
-        }else { 
-             JOptionPane.showMessageDialog(this, "Field must be filled", "Notification !!!!", JOptionPane.WARNING_MESSAGE);
+            setComboBox();
+        } else {
+            JOptionPane.showMessageDialog(this, "Field must be filled", "Notification !!!!", JOptionPane.WARNING_MESSAGE);
         }
-        
+
     }//GEN-LAST:event_diagButtonActionPerformed
+
+    private void deleteVendorButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteVendorButtonActionPerformed
+        Session session = DataHelpers.sessionFactory.openSession();
+        session.beginTransaction();
+        MdsDeviceVendor vendor = (MdsDeviceVendor) session.get(MdsDeviceVendor.class, ((ComboBoxItem)vendorCbox.getSelectedItem()).getId());
+        session.delete(vendor);
+        session.getTransaction().commit();
+        session.close();
+        setComboBox();
+    }//GEN-LAST:event_deleteVendorButtonActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -227,13 +265,16 @@ public class Mds_editRepairableDevices extends javax.swing.JPanel {
     private javax.swing.JFormattedTextField addModelField;
     private javax.swing.JFormattedTextField addVendorField;
     private javax.swing.JButton cancelOperation;
+    private javax.swing.JButton deleteVendorButton;
     private javax.swing.JButton diagButton;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JButton modelButton;
     private javax.swing.JButton vendorButton;
+    private javax.swing.JComboBox vendorCbox;
     private javax.swing.JComboBox vendorComboBox;
     // End of variables declaration//GEN-END:variables
 }

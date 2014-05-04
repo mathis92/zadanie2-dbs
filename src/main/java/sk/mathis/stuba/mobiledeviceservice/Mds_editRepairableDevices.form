@@ -33,15 +33,20 @@
                           </Group>
                           <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="addVendorField" pref="133" max="32767" attributes="0"/>
-                          <Component id="addModelField" alignment="0" max="32767" attributes="0"/>
-                          <Component id="addDiagnosticianField" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="addVendorField" pref="133" max="32767" attributes="0"/>
+                              <Component id="addModelField" alignment="0" max="32767" attributes="0"/>
+                              <Component id="addDiagnosticianField" alignment="0" max="32767" attributes="0"/>
+                          </Group>
+                          <Component id="vendorCbox" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="deleteVendorButton" min="-2" max="-2" attributes="0"/>
                           <Component id="vendorButton" min="-2" max="-2" attributes="0"/>
                           <Component id="modelButton" min="-2" max="-2" attributes="0"/>
                           <Component id="diagButton" min="-2" max="-2" attributes="0"/>
@@ -86,7 +91,13 @@
                   <Component id="addDiagnosticianField" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="diagButton" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="493" max="32767" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="vendorCbox" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="deleteVendorButton" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="452" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -160,6 +171,31 @@
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="diagButtonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel5">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Delete Vendor"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="vendorCbox">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="4">
+            <StringItem index="0" value="Item 1"/>
+            <StringItem index="1" value="Item 2"/>
+            <StringItem index="2" value="Item 3"/>
+            <StringItem index="3" value="Item 4"/>
+          </StringArray>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="deleteVendorButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Delete Vendor"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="deleteVendorButtonActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

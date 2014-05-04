@@ -355,11 +355,12 @@ public class Mds_repairDevicePanel extends javax.swing.JPanel {
 
     private void cancelOperationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelOperationActionPerformed
         if (deviceSelected.equals(1)) {
-            try {
-                DataHelpers.deleteRow("DELETE  FROM mds_repair WHERE id_diagnosis ='" + repairment.getMdsDiagnosis().getIdDiagnosis() + "'");
-            } catch (SQLException ex) {
-                Logger.getLogger(Mds_repairDevicePanel.class.getName()).log(Level.SEVERE, null, ex);
-            }
+            Session session = DataHelpers.sessionFactory.openSession();
+            session.beginTransaction();
+            session.delete(repairment);
+            session.getTransaction().commit();
+            session.close();
+
         }
 
         gui.getjTabbedPane1().remove(gui.getjTabbedPane1().getSelectedIndex());

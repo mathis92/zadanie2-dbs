@@ -589,11 +589,11 @@ public class Mds_testDevicePanel extends javax.swing.JPanel {
 
     private void cancelOperationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelOperationActionPerformed
         if (selectedDeviceToTest.equals(1)) {
-            try {
-                DataHelpers.deleteRow("DELETE FROM mds_testing WHERE id_testing = " + testing);
-            } catch (SQLException ex) {
-                Logger.getLogger(Mds_testDevicePanel.class.getName()).log(Level.SEVERE, null, ex);
-            }
+            Session session = DataHelpers.sessionFactory.openSession();
+            session.beginTransaction();
+            session.delete(testing);
+            session.getTransaction().commit();
+            session.close();
         }
         gui.getjTabbedPane1().remove(gui.getjTabbedPane1().getSelectedIndex());
         gui.getjTabbedPane1().setSelectedIndex(0);
