@@ -10,6 +10,7 @@ import java.sql.ResultSet;
 import sk.mathis.stuba.equip.DataHelpers;
 import java.sql.SQLException;
 import java.util.Date;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JTabbedPane;
@@ -18,6 +19,8 @@ import javax.swing.UnsupportedLookAndFeelException;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.criterion.Restrictions;
+import sk.mathis.stuba.hibernatemapper.MdsInvoice;
+import sk.mathis.stuba.hibernatemapper.MdsRepair;
 import sk.mathis.stuba.hibernatemapper.MdsSentDevices;
 import sk.mathis.stuba.hibernatemapper.MdsServiceOrder;
 
@@ -35,6 +38,7 @@ public class Mds_mainGui extends javax.swing.JFrame {
     public Mds_mainGui() {
         initComponents();
         updateInfo();
+        
         DataHelpers.initializeVariables();
         DataHelpers.createConnection();
         DataHelpers.configureLogging();
@@ -44,6 +48,7 @@ public class Mds_mainGui extends javax.swing.JFrame {
         jTabbedPane1.setSelectedIndex(0);
         listingPanel.fillListingTable();
         updateOrderCount();
+        updateCosts();
 
     }
 
@@ -68,6 +73,8 @@ public class Mds_mainGui extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        costs = new javax.swing.JLabel();
 
         javax.swing.GroupLayout jDialog1Layout = new javax.swing.GroupLayout(jDialog1.getContentPane());
         jDialog1.getContentPane().setLayout(jDialog1Layout);
@@ -111,34 +118,41 @@ public class Mds_mainGui extends javax.swing.JFrame {
 
         jLabel5.setText("jLabel5");
 
+        jLabel6.setText("Overall earnings");
+
+        costs.setText("jLabel7");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(80, 80, 80)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTimeInfo)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel4)
-                        .addGap(120, 120, 120)
-                        .addComponent(jWhatToDo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(150, 150, 150)
-                        .addComponent(jDoItButton))
+                        .addGap(80, 80, 80)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTimeInfo)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel4)
+                                .addGap(120, 120, 120)
+                                .addComponent(jWhatToDo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(150, 150, 150)
+                                .addComponent(jDoItButton))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(3, 3, 3)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel2)
+                                    .addComponent(jLabel3)
+                                    .addComponent(jLabel6))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel5)
+                                    .addComponent(jRepairAmountInfo)
+                                    .addComponent(costs)))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(3, 3, 3)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel3))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel5)
-                            .addComponent(jRepairAmountInfo))))
+                        .addGap(485, 485, 485)
+                        .addComponent(jLabel1)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(485, 485, 485)
-                .addComponent(jLabel1)
-                .addGap(28, 507, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -160,7 +174,11 @@ public class Mds_mainGui extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(jLabel5))
-                .addGap(161, 161, 161))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel6)
+                    .addComponent(costs))
+                .addGap(141, 141, 141))
         );
 
         jTabbedPane1.addTab("Main screen", jPanel1);
@@ -295,7 +313,38 @@ public class Mds_mainGui extends javax.swing.JFrame {
         return jTabbedPane1;
     }
 
+    public void updateCosts() {
+        Thread thread = new Thread(new Runnable() {
+
+            @Override
+            public void run() {
+                while (true) {
+                    try {
+                        Session session = DataHelpers.sessionFactory.openSession();
+                        session.beginTransaction();
+                        List<MdsRepair> repair = session.createCriteria(MdsRepair.class).list();
+                        Double totalCosts = 0.0;
+                        for (MdsRepair rep : repair) {
+                            totalCosts += rep.getRepairCosts();
+                        }
+                        Double rounded = (double) Math.round(totalCosts * 100) / 100;
+                        costs.setText(rounded.toString() + " €");
+
+                        session.getTransaction().commit();
+                        session.close();
+
+                        Thread.sleep(1000);
+                    } catch (InterruptedException ex) {
+                        Logger.getLogger(Mds_mainGui.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                }
+            }
+        });
+        thread.start();
+    }
+
     public void updateOrderCount() {
+        System.out.println("Ma zavolau " + Thread.currentThread().getStackTrace()[Thread.currentThread().getStackTrace().length - 1].getMethodName());
         Session session = DataHelpers.sessionFactory.openSession();
         session.beginTransaction();
         Criteria cr = session.createCriteria(MdsServiceOrder.class);
@@ -311,6 +360,7 @@ public class Mds_mainGui extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel costs;
     private javax.swing.JDialog jDialog1;
     private javax.swing.JButton jDoItButton;
     private javax.swing.JLabel jLabel1;
@@ -318,6 +368,7 @@ public class Mds_mainGui extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel jRepairAmountInfo;
     private javax.swing.JTabbedPane jTabbedPane1;

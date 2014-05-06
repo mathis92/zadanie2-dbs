@@ -346,6 +346,8 @@ public class Mds_repairDevicePanel extends javax.swing.JPanel {
             gui.getjTabbedPane1().remove(gui.getjTabbedPane1().getSelectedIndex());
             gui.getjTabbedPane1().setSelectedIndex(0);
             gui.remove(gui.repairDevicePanel);
+            gui.updateOrderCount();
+            System.out.println("update ceny");
             gui.refreshListingPanel();
             gui.repairDevicePanel = null;
         }

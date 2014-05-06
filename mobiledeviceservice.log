@@ -4349,3 +4349,601 @@
 2014-05-04 20:50:53,592}ABSOLUTE{  INFO org.hibernate.engine.jdbc.internal.LobCreatorBuilder}1{:97 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
 2014-05-04 20:50:53,705}ABSOLUTE{  INFO org.hibernate.engine.transaction.internal.TransactionFactoryInitiator}1{:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
 2014-05-04 20:50:53,715}ABSOLUTE{  INFO org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory}1{:47 - HHH000397: Using ASTQueryTranslatorFactory
+2014-05-04 21:02:38,185}ABSOLUTE{  INFO org.hibernate.annotations.common.Version}1{:37 - Hibernate Commons Annotations 3.2.0.Final
+2014-05-04 21:02:38,201}ABSOLUTE{  INFO org.hibernate.Version}1{:54 - HHH000412: Hibernate Core {4.3.5.Final}
+2014-05-04 21:02:38,205}ABSOLUTE{  INFO org.hibernate.cfg.Environment}1{:239 - HHH000206: hibernate.properties not found
+2014-05-04 21:02:38,209}ABSOLUTE{  INFO org.hibernate.cfg.Environment}1{:346 - HHH000021: Bytecode provider name : javassist
+2014-05-04 21:02:38,247}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:835 - HHH000235: Searching for mapping documents in jar: HibernateMapper-1.0-SNAPSHOT.jar
+2014-05-04 21:02:38,249}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDevice.hbm.xml
+2014-05-04 21:02:38,436}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDeviceModel.hbm.xml
+2014-05-04 21:02:38,493}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDeviceVendor.hbm.xml
+2014-05-04 21:02:38,520}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDiagnosis.hbm.xml
+2014-05-04 21:02:38,549}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDiagnostician.hbm.xml
+2014-05-04 21:02:38,571}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsInvoice.hbm.xml
+2014-05-04 21:02:38,605}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsRepair.hbm.xml
+2014-05-04 21:02:38,629}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsSentDevices.hbm.xml
+2014-05-04 21:02:38,655}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsServiceClaimant.hbm.xml
+2014-05-04 21:02:38,675}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsServiceOrder.hbm.xml
+2014-05-04 21:02:38,688}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsTest.hbm.xml
+2014-05-04 21:02:38,704}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsTesting.hbm.xml
+2014-05-04 21:02:38,929}ABSOLUTE{  WARN org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2014-05-04 21:02:38,932}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/mobiledeviceservice?zeroDateTimeBehavior=convertToNull]
+2014-05-04 21:02:38,932}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:175 - HHH000046: Connection properties: {user=root, password=****}
+2014-05-04 21:02:38,933}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:180 - HHH000006: Autocommit mode: false
+2014-05-04 21:02:38,935}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2014-05-04 21:02:39,115}ABSOLUTE{  INFO org.hibernate.dialect.Dialect}1{:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2014-05-04 21:02:39,136}ABSOLUTE{  INFO org.hibernate.engine.jdbc.internal.LobCreatorBuilder}1{:97 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2014-05-04 21:02:39,271}ABSOLUTE{  INFO org.hibernate.engine.transaction.internal.TransactionFactoryInitiator}1{:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2014-05-04 21:02:39,281}ABSOLUTE{  INFO org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory}1{:47 - HHH000397: Using ASTQueryTranslatorFactory
+2014-05-04 21:06:51,323}ABSOLUTE{  INFO org.hibernate.annotations.common.Version}1{:37 - Hibernate Commons Annotations 3.2.0.Final
+2014-05-04 21:06:51,339}ABSOLUTE{  INFO org.hibernate.Version}1{:54 - HHH000412: Hibernate Core {4.3.5.Final}
+2014-05-04 21:06:51,343}ABSOLUTE{  INFO org.hibernate.cfg.Environment}1{:239 - HHH000206: hibernate.properties not found
+2014-05-04 21:06:51,346}ABSOLUTE{  INFO org.hibernate.cfg.Environment}1{:346 - HHH000021: Bytecode provider name : javassist
+2014-05-04 21:06:51,376}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:835 - HHH000235: Searching for mapping documents in jar: HibernateMapper-1.0-SNAPSHOT.jar
+2014-05-04 21:06:51,377}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDevice.hbm.xml
+2014-05-04 21:06:51,556}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDeviceModel.hbm.xml
+2014-05-04 21:06:51,585}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDeviceVendor.hbm.xml
+2014-05-04 21:06:51,612}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDiagnosis.hbm.xml
+2014-05-04 21:06:51,635}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDiagnostician.hbm.xml
+2014-05-04 21:06:51,659}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsInvoice.hbm.xml
+2014-05-04 21:06:51,683}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsRepair.hbm.xml
+2014-05-04 21:06:51,705}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsSentDevices.hbm.xml
+2014-05-04 21:06:51,726}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsServiceClaimant.hbm.xml
+2014-05-04 21:06:51,750}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsServiceOrder.hbm.xml
+2014-05-04 21:06:51,770}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsTest.hbm.xml
+2014-05-04 21:06:51,785}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsTesting.hbm.xml
+2014-05-04 21:06:51,970}ABSOLUTE{  WARN org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2014-05-04 21:06:51,972}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/mobiledeviceservice?zeroDateTimeBehavior=convertToNull]
+2014-05-04 21:06:51,972}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:175 - HHH000046: Connection properties: {user=root, password=****}
+2014-05-04 21:06:51,973}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:180 - HHH000006: Autocommit mode: false
+2014-05-04 21:06:51,975}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2014-05-04 21:06:52,170}ABSOLUTE{  INFO org.hibernate.dialect.Dialect}1{:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2014-05-04 21:06:52,184}ABSOLUTE{  INFO org.hibernate.engine.jdbc.internal.LobCreatorBuilder}1{:97 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2014-05-04 21:06:52,319}ABSOLUTE{  INFO org.hibernate.engine.transaction.internal.TransactionFactoryInitiator}1{:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2014-05-04 21:06:52,331}ABSOLUTE{  INFO org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory}1{:47 - HHH000397: Using ASTQueryTranslatorFactory
+2014-05-04 21:09:12,219}ABSOLUTE{  INFO org.hibernate.annotations.common.Version}1{:37 - Hibernate Commons Annotations 3.2.0.Final
+2014-05-04 21:09:12,231}ABSOLUTE{  INFO org.hibernate.Version}1{:54 - HHH000412: Hibernate Core {4.3.5.Final}
+2014-05-04 21:09:12,234}ABSOLUTE{  INFO org.hibernate.cfg.Environment}1{:239 - HHH000206: hibernate.properties not found
+2014-05-04 21:09:12,236}ABSOLUTE{  INFO org.hibernate.cfg.Environment}1{:346 - HHH000021: Bytecode provider name : javassist
+2014-05-04 21:09:12,263}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:835 - HHH000235: Searching for mapping documents in jar: HibernateMapper-1.0-SNAPSHOT.jar
+2014-05-04 21:09:12,265}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDevice.hbm.xml
+2014-05-04 21:09:12,430}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDeviceModel.hbm.xml
+2014-05-04 21:09:12,459}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDeviceVendor.hbm.xml
+2014-05-04 21:09:12,492}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDiagnosis.hbm.xml
+2014-05-04 21:09:12,513}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDiagnostician.hbm.xml
+2014-05-04 21:09:12,538}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsInvoice.hbm.xml
+2014-05-04 21:09:12,561}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsRepair.hbm.xml
+2014-05-04 21:09:12,585}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsSentDevices.hbm.xml
+2014-05-04 21:09:12,611}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsServiceClaimant.hbm.xml
+2014-05-04 21:09:12,631}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsServiceOrder.hbm.xml
+2014-05-04 21:09:12,647}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsTest.hbm.xml
+2014-05-04 21:09:12,662}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsTesting.hbm.xml
+2014-05-04 21:09:12,816}ABSOLUTE{  WARN org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2014-05-04 21:09:12,818}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/mobiledeviceservice?zeroDateTimeBehavior=convertToNull]
+2014-05-04 21:09:12,819}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:175 - HHH000046: Connection properties: {user=root, password=****}
+2014-05-04 21:09:12,819}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:180 - HHH000006: Autocommit mode: false
+2014-05-04 21:09:12,821}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2014-05-04 21:09:12,996}ABSOLUTE{  INFO org.hibernate.dialect.Dialect}1{:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2014-05-04 21:09:13,011}ABSOLUTE{  INFO org.hibernate.engine.jdbc.internal.LobCreatorBuilder}1{:97 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2014-05-04 21:09:13,141}ABSOLUTE{  INFO org.hibernate.engine.transaction.internal.TransactionFactoryInitiator}1{:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2014-05-04 21:09:13,150}ABSOLUTE{  INFO org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory}1{:47 - HHH000397: Using ASTQueryTranslatorFactory
+2014-05-04 21:10:00,586}ABSOLUTE{  INFO org.hibernate.annotations.common.Version}1{:37 - Hibernate Commons Annotations 3.2.0.Final
+2014-05-04 21:10:00,601}ABSOLUTE{  INFO org.hibernate.Version}1{:54 - HHH000412: Hibernate Core {4.3.5.Final}
+2014-05-04 21:10:00,614}ABSOLUTE{  INFO org.hibernate.cfg.Environment}1{:239 - HHH000206: hibernate.properties not found
+2014-05-04 21:10:00,617}ABSOLUTE{  INFO org.hibernate.cfg.Environment}1{:346 - HHH000021: Bytecode provider name : javassist
+2014-05-04 21:10:00,645}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:835 - HHH000235: Searching for mapping documents in jar: HibernateMapper-1.0-SNAPSHOT.jar
+2014-05-04 21:10:00,646}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDevice.hbm.xml
+2014-05-04 21:10:00,795}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDeviceModel.hbm.xml
+2014-05-04 21:10:00,825}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDeviceVendor.hbm.xml
+2014-05-04 21:10:00,854}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDiagnosis.hbm.xml
+2014-05-04 21:10:00,885}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDiagnostician.hbm.xml
+2014-05-04 21:10:00,931}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsInvoice.hbm.xml
+2014-05-04 21:10:00,967}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsRepair.hbm.xml
+2014-05-04 21:10:00,988}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsSentDevices.hbm.xml
+2014-05-04 21:10:01,014}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsServiceClaimant.hbm.xml
+2014-05-04 21:10:01,039}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsServiceOrder.hbm.xml
+2014-05-04 21:10:01,084}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsTest.hbm.xml
+2014-05-04 21:10:01,101}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsTesting.hbm.xml
+2014-05-04 21:10:01,406}ABSOLUTE{  WARN org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2014-05-04 21:10:01,410}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/mobiledeviceservice?zeroDateTimeBehavior=convertToNull]
+2014-05-04 21:10:01,411}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:175 - HHH000046: Connection properties: {user=root, password=****}
+2014-05-04 21:10:01,411}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:180 - HHH000006: Autocommit mode: false
+2014-05-04 21:10:01,415}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2014-05-04 21:10:01,612}ABSOLUTE{  INFO org.hibernate.dialect.Dialect}1{:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2014-05-04 21:10:01,633}ABSOLUTE{  INFO org.hibernate.engine.jdbc.internal.LobCreatorBuilder}1{:97 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2014-05-04 21:10:01,762}ABSOLUTE{  INFO org.hibernate.engine.transaction.internal.TransactionFactoryInitiator}1{:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2014-05-04 21:10:01,777}ABSOLUTE{  INFO org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory}1{:47 - HHH000397: Using ASTQueryTranslatorFactory
+2014-05-05 13:16:51,708}ABSOLUTE{  INFO org.hibernate.annotations.common.Version}1{:37 - Hibernate Commons Annotations 3.2.0.Final
+2014-05-05 13:16:51,722}ABSOLUTE{  INFO org.hibernate.Version}1{:54 - HHH000412: Hibernate Core {4.3.5.Final}
+2014-05-05 13:16:51,726}ABSOLUTE{  INFO org.hibernate.cfg.Environment}1{:239 - HHH000206: hibernate.properties not found
+2014-05-05 13:16:51,729}ABSOLUTE{  INFO org.hibernate.cfg.Environment}1{:346 - HHH000021: Bytecode provider name : javassist
+2014-05-05 13:16:51,762}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:835 - HHH000235: Searching for mapping documents in jar: HibernateMapper-1.0-SNAPSHOT.jar
+2014-05-05 13:16:51,794}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDevice.hbm.xml
+2014-05-05 13:16:51,988}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDeviceModel.hbm.xml
+2014-05-05 13:16:52,051}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDeviceVendor.hbm.xml
+2014-05-05 13:16:52,089}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDiagnosis.hbm.xml
+2014-05-05 13:16:52,115}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDiagnostician.hbm.xml
+2014-05-05 13:16:52,174}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsInvoice.hbm.xml
+2014-05-05 13:16:52,217}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsRepair.hbm.xml
+2014-05-05 13:16:52,256}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsSentDevices.hbm.xml
+2014-05-05 13:16:52,273}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsServiceClaimant.hbm.xml
+2014-05-05 13:16:52,296}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsServiceOrder.hbm.xml
+2014-05-05 13:16:52,322}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsTest.hbm.xml
+2014-05-05 13:16:52,359}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsTesting.hbm.xml
+2014-05-05 13:16:52,820}ABSOLUTE{  WARN org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2014-05-05 13:16:52,822}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/mobiledeviceservice?zeroDateTimeBehavior=convertToNull]
+2014-05-05 13:16:52,823}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:175 - HHH000046: Connection properties: {user=root, password=****}
+2014-05-05 13:16:52,823}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:180 - HHH000006: Autocommit mode: false
+2014-05-05 13:16:52,827}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2014-05-05 13:16:53,067}ABSOLUTE{  INFO org.hibernate.dialect.Dialect}1{:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2014-05-05 13:16:53,083}ABSOLUTE{  INFO org.hibernate.engine.jdbc.internal.LobCreatorBuilder}1{:97 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2014-05-05 13:16:53,470}ABSOLUTE{  INFO org.hibernate.engine.transaction.internal.TransactionFactoryInitiator}1{:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2014-05-05 13:16:53,632}ABSOLUTE{  INFO org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory}1{:47 - HHH000397: Using ASTQueryTranslatorFactory
+2014-05-05 16:05:51,496}ABSOLUTE{  INFO org.hibernate.annotations.common.Version}1{:37 - Hibernate Commons Annotations 3.2.0.Final
+2014-05-05 16:05:51,515}ABSOLUTE{  INFO org.hibernate.Version}1{:54 - HHH000412: Hibernate Core {4.3.5.Final}
+2014-05-05 16:05:51,518}ABSOLUTE{  INFO org.hibernate.cfg.Environment}1{:239 - HHH000206: hibernate.properties not found
+2014-05-05 16:05:51,548}ABSOLUTE{  INFO org.hibernate.cfg.Environment}1{:346 - HHH000021: Bytecode provider name : javassist
+2014-05-05 16:05:51,574}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:835 - HHH000235: Searching for mapping documents in jar: HibernateMapper-1.0-SNAPSHOT.jar
+2014-05-05 16:05:51,575}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDevice.hbm.xml
+2014-05-05 16:05:51,727}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDeviceModel.hbm.xml
+2014-05-05 16:05:51,753}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDeviceVendor.hbm.xml
+2014-05-05 16:05:51,780}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDiagnosis.hbm.xml
+2014-05-05 16:05:51,803}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDiagnostician.hbm.xml
+2014-05-05 16:05:51,824}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsInvoice.hbm.xml
+2014-05-05 16:05:51,842}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsRepair.hbm.xml
+2014-05-05 16:05:51,863}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsSentDevices.hbm.xml
+2014-05-05 16:05:51,886}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsServiceClaimant.hbm.xml
+2014-05-05 16:05:51,904}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsServiceOrder.hbm.xml
+2014-05-05 16:05:51,919}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsTest.hbm.xml
+2014-05-05 16:05:51,931}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsTesting.hbm.xml
+2014-05-05 16:05:52,092}ABSOLUTE{  WARN org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2014-05-05 16:05:52,094}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/mobiledeviceservice?zeroDateTimeBehavior=convertToNull]
+2014-05-05 16:05:52,095}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:175 - HHH000046: Connection properties: {user=root, password=****}
+2014-05-05 16:05:52,095}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:180 - HHH000006: Autocommit mode: false
+2014-05-05 16:05:52,097}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2014-05-05 16:05:52,272}ABSOLUTE{  INFO org.hibernate.dialect.Dialect}1{:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2014-05-05 16:05:52,285}ABSOLUTE{  INFO org.hibernate.engine.jdbc.internal.LobCreatorBuilder}1{:97 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2014-05-05 16:05:52,395}ABSOLUTE{  INFO org.hibernate.engine.transaction.internal.TransactionFactoryInitiator}1{:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2014-05-05 16:05:52,404}ABSOLUTE{  INFO org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory}1{:47 - HHH000397: Using ASTQueryTranslatorFactory
+2014-05-05 16:15:09,424}ABSOLUTE{  INFO org.hibernate.annotations.common.Version}1{:37 - Hibernate Commons Annotations 3.2.0.Final
+2014-05-05 16:15:09,518}ABSOLUTE{  INFO org.hibernate.Version}1{:54 - HHH000412: Hibernate Core {4.3.5.Final}
+2014-05-05 16:15:09,549}ABSOLUTE{  INFO org.hibernate.cfg.Environment}1{:239 - HHH000206: hibernate.properties not found
+2014-05-05 16:15:09,549}ABSOLUTE{  INFO org.hibernate.cfg.Environment}1{:346 - HHH000021: Bytecode provider name : javassist
+2014-05-05 16:15:09,799}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:835 - HHH000235: Searching for mapping documents in jar: HibernateMapper-1.0-SNAPSHOT.jar
+2014-05-05 16:15:09,830}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDevice.hbm.xml
+2014-05-05 16:15:10,273}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDeviceModel.hbm.xml
+2014-05-05 16:15:10,320}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDeviceVendor.hbm.xml
+2014-05-05 16:15:10,367}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDiagnosis.hbm.xml
+2014-05-05 16:15:10,414}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDiagnostician.hbm.xml
+2014-05-05 16:15:10,429}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsInvoice.hbm.xml
+2014-05-05 16:15:10,492}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsRepair.hbm.xml
+2014-05-05 16:15:10,523}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsSentDevices.hbm.xml
+2014-05-05 16:15:10,539}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsServiceClaimant.hbm.xml
+2014-05-05 16:15:10,570}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsServiceOrder.hbm.xml
+2014-05-05 16:15:10,601}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsTest.hbm.xml
+2014-05-05 16:15:10,617}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsTesting.hbm.xml
+2014-05-05 16:15:11,761}ABSOLUTE{  WARN org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2014-05-05 16:15:11,761}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/mobiledeviceservice?zeroDateTimeBehavior=convertToNull]
+2014-05-05 16:15:11,761}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:175 - HHH000046: Connection properties: {user=root, password=****}
+2014-05-05 16:15:11,761}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:180 - HHH000006: Autocommit mode: false
+2014-05-05 16:15:11,761}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2014-05-05 16:15:12,121}ABSOLUTE{  INFO org.hibernate.dialect.Dialect}1{:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2014-05-05 16:15:12,417}ABSOLUTE{  INFO org.hibernate.engine.jdbc.internal.LobCreatorBuilder}1{:97 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2014-05-05 16:15:13,808}ABSOLUTE{  INFO org.hibernate.engine.transaction.internal.TransactionFactoryInitiator}1{:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2014-05-05 16:15:14,058}ABSOLUTE{  INFO org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory}1{:47 - HHH000397: Using ASTQueryTranslatorFactory
+2014-05-05 16:28:35,724}ABSOLUTE{  INFO org.hibernate.annotations.common.Version}1{:37 - Hibernate Commons Annotations 3.2.0.Final
+2014-05-05 16:28:35,739}ABSOLUTE{  INFO org.hibernate.Version}1{:54 - HHH000412: Hibernate Core {4.3.5.Final}
+2014-05-05 16:28:35,739}ABSOLUTE{  INFO org.hibernate.cfg.Environment}1{:239 - HHH000206: hibernate.properties not found
+2014-05-05 16:28:35,755}ABSOLUTE{  INFO org.hibernate.cfg.Environment}1{:346 - HHH000021: Bytecode provider name : javassist
+2014-05-05 16:28:35,786}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:835 - HHH000235: Searching for mapping documents in jar: HibernateMapper-1.0-SNAPSHOT.jar
+2014-05-05 16:28:35,786}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDevice.hbm.xml
+2014-05-05 16:28:35,989}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDeviceModel.hbm.xml
+2014-05-05 16:28:36,021}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDeviceVendor.hbm.xml
+2014-05-05 16:28:36,052}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDiagnosis.hbm.xml
+2014-05-05 16:28:36,068}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDiagnostician.hbm.xml
+2014-05-05 16:28:36,083}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsInvoice.hbm.xml
+2014-05-05 16:28:36,099}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsRepair.hbm.xml
+2014-05-05 16:28:36,130}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsSentDevices.hbm.xml
+2014-05-05 16:28:36,146}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsServiceClaimant.hbm.xml
+2014-05-05 16:28:36,161}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsServiceOrder.hbm.xml
+2014-05-05 16:28:36,177}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsTest.hbm.xml
+2014-05-05 16:28:36,193}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsTesting.hbm.xml
+2014-05-05 16:28:36,380}ABSOLUTE{  WARN org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2014-05-05 16:28:36,380}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/mobiledeviceservice?zeroDateTimeBehavior=convertToNull]
+2014-05-05 16:28:36,380}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:175 - HHH000046: Connection properties: {user=root, password=****}
+2014-05-05 16:28:36,380}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:180 - HHH000006: Autocommit mode: false
+2014-05-05 16:28:36,380}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2014-05-05 16:28:36,505}ABSOLUTE{  INFO org.hibernate.dialect.Dialect}1{:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2014-05-05 16:28:36,521}ABSOLUTE{  INFO org.hibernate.engine.jdbc.internal.LobCreatorBuilder}1{:97 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2014-05-05 16:28:36,646}ABSOLUTE{  INFO org.hibernate.engine.transaction.internal.TransactionFactoryInitiator}1{:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2014-05-05 16:28:36,661}ABSOLUTE{  INFO org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory}1{:47 - HHH000397: Using ASTQueryTranslatorFactory
+2014-05-05 16:31:42,393}ABSOLUTE{  INFO org.hibernate.annotations.common.Version}1{:37 - Hibernate Commons Annotations 3.2.0.Final
+2014-05-05 16:31:42,393}ABSOLUTE{  INFO org.hibernate.Version}1{:54 - HHH000412: Hibernate Core {4.3.5.Final}
+2014-05-05 16:31:42,409}ABSOLUTE{  INFO org.hibernate.cfg.Environment}1{:239 - HHH000206: hibernate.properties not found
+2014-05-05 16:31:42,409}ABSOLUTE{  INFO org.hibernate.cfg.Environment}1{:346 - HHH000021: Bytecode provider name : javassist
+2014-05-05 16:31:42,440}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:835 - HHH000235: Searching for mapping documents in jar: HibernateMapper-1.0-SNAPSHOT.jar
+2014-05-05 16:31:42,440}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDevice.hbm.xml
+2014-05-05 16:31:42,627}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDeviceModel.hbm.xml
+2014-05-05 16:31:42,659}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDeviceVendor.hbm.xml
+2014-05-05 16:31:42,674}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDiagnosis.hbm.xml
+2014-05-05 16:31:42,690}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDiagnostician.hbm.xml
+2014-05-05 16:31:42,712}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsInvoice.hbm.xml
+2014-05-05 16:31:42,743}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsRepair.hbm.xml
+2014-05-05 16:31:42,759}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsSentDevices.hbm.xml
+2014-05-05 16:31:42,774}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsServiceClaimant.hbm.xml
+2014-05-05 16:31:42,790}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsServiceOrder.hbm.xml
+2014-05-05 16:31:42,805}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsTest.hbm.xml
+2014-05-05 16:31:42,821}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsTesting.hbm.xml
+2014-05-05 16:31:43,009}ABSOLUTE{  WARN org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2014-05-05 16:31:43,009}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/mobiledeviceservice?zeroDateTimeBehavior=convertToNull]
+2014-05-05 16:31:43,024}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:175 - HHH000046: Connection properties: {user=root, password=****}
+2014-05-05 16:31:43,024}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:180 - HHH000006: Autocommit mode: false
+2014-05-05 16:31:43,024}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2014-05-05 16:31:43,149}ABSOLUTE{  INFO org.hibernate.dialect.Dialect}1{:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2014-05-05 16:31:43,149}ABSOLUTE{  INFO org.hibernate.engine.jdbc.internal.LobCreatorBuilder}1{:97 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2014-05-05 16:31:43,274}ABSOLUTE{  INFO org.hibernate.engine.transaction.internal.TransactionFactoryInitiator}1{:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2014-05-05 16:31:43,290}ABSOLUTE{  INFO org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory}1{:47 - HHH000397: Using ASTQueryTranslatorFactory
+2014-05-05 16:49:04,529}ABSOLUTE{  INFO org.hibernate.annotations.common.Version}1{:37 - Hibernate Commons Annotations 3.2.0.Final
+2014-05-05 16:49:04,545}ABSOLUTE{  INFO org.hibernate.Version}1{:54 - HHH000412: Hibernate Core {4.3.5.Final}
+2014-05-05 16:49:04,545}ABSOLUTE{  INFO org.hibernate.cfg.Environment}1{:239 - HHH000206: hibernate.properties not found
+2014-05-05 16:49:04,545}ABSOLUTE{  INFO org.hibernate.cfg.Environment}1{:346 - HHH000021: Bytecode provider name : javassist
+2014-05-05 16:49:04,576}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:835 - HHH000235: Searching for mapping documents in jar: HibernateMapper-1.0-SNAPSHOT.jar
+2014-05-05 16:49:04,576}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDevice.hbm.xml
+2014-05-05 16:49:04,717}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDeviceModel.hbm.xml
+2014-05-05 16:49:04,748}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDeviceVendor.hbm.xml
+2014-05-05 16:49:04,764}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDiagnosis.hbm.xml
+2014-05-05 16:49:04,795}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDiagnostician.hbm.xml
+2014-05-05 16:49:04,826}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsInvoice.hbm.xml
+2014-05-05 16:49:04,842}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsRepair.hbm.xml
+2014-05-05 16:49:04,873}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsSentDevices.hbm.xml
+2014-05-05 16:49:04,889}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsServiceClaimant.hbm.xml
+2014-05-05 16:49:04,920}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsServiceOrder.hbm.xml
+2014-05-05 16:49:04,935}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsTest.hbm.xml
+2014-05-05 16:49:04,951}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsTesting.hbm.xml
+2014-05-05 16:49:05,201}ABSOLUTE{  WARN org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2014-05-05 16:49:05,201}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/mobiledeviceservice?zeroDateTimeBehavior=convertToNull]
+2014-05-05 16:49:05,201}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:175 - HHH000046: Connection properties: {user=root, password=****}
+2014-05-05 16:49:05,201}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:180 - HHH000006: Autocommit mode: false
+2014-05-05 16:49:05,201}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2014-05-05 16:49:05,326}ABSOLUTE{  INFO org.hibernate.dialect.Dialect}1{:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2014-05-05 16:49:05,342}ABSOLUTE{  INFO org.hibernate.engine.jdbc.internal.LobCreatorBuilder}1{:97 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2014-05-05 16:49:05,467}ABSOLUTE{  INFO org.hibernate.engine.transaction.internal.TransactionFactoryInitiator}1{:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2014-05-05 16:49:05,482}ABSOLUTE{  INFO org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory}1{:47 - HHH000397: Using ASTQueryTranslatorFactory
+2014-05-05 16:51:16,051}ABSOLUTE{  INFO org.hibernate.annotations.common.Version}1{:37 - Hibernate Commons Annotations 3.2.0.Final
+2014-05-05 16:51:16,069}ABSOLUTE{  INFO org.hibernate.Version}1{:54 - HHH000412: Hibernate Core {4.3.5.Final}
+2014-05-05 16:51:16,072}ABSOLUTE{  INFO org.hibernate.cfg.Environment}1{:239 - HHH000206: hibernate.properties not found
+2014-05-05 16:51:16,077}ABSOLUTE{  INFO org.hibernate.cfg.Environment}1{:346 - HHH000021: Bytecode provider name : javassist
+2014-05-05 16:51:16,111}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:835 - HHH000235: Searching for mapping documents in jar: HibernateMapper-1.0-SNAPSHOT.jar
+2014-05-05 16:51:16,112}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDevice.hbm.xml
+2014-05-05 16:51:16,320}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDeviceModel.hbm.xml
+2014-05-05 16:51:16,394}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDeviceVendor.hbm.xml
+2014-05-05 16:51:16,439}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDiagnosis.hbm.xml
+2014-05-05 16:51:16,464}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDiagnostician.hbm.xml
+2014-05-05 16:51:16,678}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsInvoice.hbm.xml
+2014-05-05 16:51:16,755}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsRepair.hbm.xml
+2014-05-05 16:51:16,770}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsSentDevices.hbm.xml
+2014-05-05 16:51:16,787}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsServiceClaimant.hbm.xml
+2014-05-05 16:51:16,801}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsServiceOrder.hbm.xml
+2014-05-05 16:51:16,846}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsTest.hbm.xml
+2014-05-05 16:51:16,861}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsTesting.hbm.xml
+2014-05-05 16:51:17,175}ABSOLUTE{  WARN org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2014-05-05 16:51:17,178}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/mobiledeviceservice?zeroDateTimeBehavior=convertToNull]
+2014-05-05 16:51:17,180}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:175 - HHH000046: Connection properties: {user=root, password=****}
+2014-05-05 16:51:17,180}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:180 - HHH000006: Autocommit mode: false
+2014-05-05 16:51:17,184}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2014-05-05 16:51:17,358}ABSOLUTE{  INFO org.hibernate.dialect.Dialect}1{:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2014-05-05 16:51:17,382}ABSOLUTE{  INFO org.hibernate.engine.jdbc.internal.LobCreatorBuilder}1{:97 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2014-05-05 16:51:17,613}ABSOLUTE{  INFO org.hibernate.engine.transaction.internal.TransactionFactoryInitiator}1{:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2014-05-05 16:51:17,627}ABSOLUTE{  INFO org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory}1{:47 - HHH000397: Using ASTQueryTranslatorFactory
+2014-05-05 16:51:32,223}ABSOLUTE{  INFO org.hibernate.annotations.common.Version}1{:37 - Hibernate Commons Annotations 3.2.0.Final
+2014-05-05 16:51:32,235}ABSOLUTE{  INFO org.hibernate.Version}1{:54 - HHH000412: Hibernate Core {4.3.5.Final}
+2014-05-05 16:51:32,239}ABSOLUTE{  INFO org.hibernate.cfg.Environment}1{:239 - HHH000206: hibernate.properties not found
+2014-05-05 16:51:32,241}ABSOLUTE{  INFO org.hibernate.cfg.Environment}1{:346 - HHH000021: Bytecode provider name : javassist
+2014-05-05 16:51:32,274}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:835 - HHH000235: Searching for mapping documents in jar: HibernateMapper-1.0-SNAPSHOT.jar
+2014-05-05 16:51:32,275}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDevice.hbm.xml
+2014-05-05 16:51:32,458}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDeviceModel.hbm.xml
+2014-05-05 16:51:32,492}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDeviceVendor.hbm.xml
+2014-05-05 16:51:32,517}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDiagnosis.hbm.xml
+2014-05-05 16:51:32,539}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDiagnostician.hbm.xml
+2014-05-05 16:51:32,560}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsInvoice.hbm.xml
+2014-05-05 16:51:32,579}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsRepair.hbm.xml
+2014-05-05 16:51:32,600}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsSentDevices.hbm.xml
+2014-05-05 16:51:32,619}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsServiceClaimant.hbm.xml
+2014-05-05 16:51:32,639}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsServiceOrder.hbm.xml
+2014-05-05 16:51:32,654}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsTest.hbm.xml
+2014-05-05 16:51:32,668}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsTesting.hbm.xml
+2014-05-05 16:51:32,902}ABSOLUTE{  WARN org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2014-05-05 16:51:32,904}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/mobiledeviceservice?zeroDateTimeBehavior=convertToNull]
+2014-05-05 16:51:32,905}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:175 - HHH000046: Connection properties: {user=root, password=****}
+2014-05-05 16:51:32,906}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:180 - HHH000006: Autocommit mode: false
+2014-05-05 16:51:32,908}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2014-05-05 16:51:33,040}ABSOLUTE{  INFO org.hibernate.dialect.Dialect}1{:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2014-05-05 16:51:33,058}ABSOLUTE{  INFO org.hibernate.engine.jdbc.internal.LobCreatorBuilder}1{:97 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2014-05-05 16:51:33,248}ABSOLUTE{  INFO org.hibernate.engine.transaction.internal.TransactionFactoryInitiator}1{:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2014-05-05 16:51:33,268}ABSOLUTE{  INFO org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory}1{:47 - HHH000397: Using ASTQueryTranslatorFactory
+2014-05-05 16:53:14,563}ABSOLUTE{  INFO org.hibernate.annotations.common.Version}1{:37 - Hibernate Commons Annotations 3.2.0.Final
+2014-05-05 16:53:14,578}ABSOLUTE{  INFO org.hibernate.Version}1{:54 - HHH000412: Hibernate Core {4.3.5.Final}
+2014-05-05 16:53:14,582}ABSOLUTE{  INFO org.hibernate.cfg.Environment}1{:239 - HHH000206: hibernate.properties not found
+2014-05-05 16:53:14,586}ABSOLUTE{  INFO org.hibernate.cfg.Environment}1{:346 - HHH000021: Bytecode provider name : javassist
+2014-05-05 16:53:14,613}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:835 - HHH000235: Searching for mapping documents in jar: HibernateMapper-1.0-SNAPSHOT.jar
+2014-05-05 16:53:14,614}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDevice.hbm.xml
+2014-05-05 16:53:14,786}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDeviceModel.hbm.xml
+2014-05-05 16:53:14,815}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDeviceVendor.hbm.xml
+2014-05-05 16:53:14,837}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDiagnosis.hbm.xml
+2014-05-05 16:53:14,861}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDiagnostician.hbm.xml
+2014-05-05 16:53:14,882}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsInvoice.hbm.xml
+2014-05-05 16:53:14,901}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsRepair.hbm.xml
+2014-05-05 16:53:14,920}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsSentDevices.hbm.xml
+2014-05-05 16:53:14,937}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsServiceClaimant.hbm.xml
+2014-05-05 16:53:14,955}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsServiceOrder.hbm.xml
+2014-05-05 16:53:14,972}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsTest.hbm.xml
+2014-05-05 16:53:14,986}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsTesting.hbm.xml
+2014-05-05 16:53:15,144}ABSOLUTE{  WARN org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2014-05-05 16:53:15,146}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/mobiledeviceservice?zeroDateTimeBehavior=convertToNull]
+2014-05-05 16:53:15,147}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:175 - HHH000046: Connection properties: {user=root, password=****}
+2014-05-05 16:53:15,147}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:180 - HHH000006: Autocommit mode: false
+2014-05-05 16:53:15,149}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2014-05-05 16:53:15,260}ABSOLUTE{  INFO org.hibernate.dialect.Dialect}1{:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2014-05-05 16:53:15,272}ABSOLUTE{  INFO org.hibernate.engine.jdbc.internal.LobCreatorBuilder}1{:97 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2014-05-05 16:53:15,388}ABSOLUTE{  INFO org.hibernate.engine.transaction.internal.TransactionFactoryInitiator}1{:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2014-05-05 16:53:15,400}ABSOLUTE{  INFO org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory}1{:47 - HHH000397: Using ASTQueryTranslatorFactory
+2014-05-05 16:54:29,870}ABSOLUTE{  INFO org.hibernate.annotations.common.Version}1{:37 - Hibernate Commons Annotations 3.2.0.Final
+2014-05-05 16:54:29,887}ABSOLUTE{  INFO org.hibernate.Version}1{:54 - HHH000412: Hibernate Core {4.3.5.Final}
+2014-05-05 16:54:29,891}ABSOLUTE{  INFO org.hibernate.cfg.Environment}1{:239 - HHH000206: hibernate.properties not found
+2014-05-05 16:54:29,894}ABSOLUTE{  INFO org.hibernate.cfg.Environment}1{:346 - HHH000021: Bytecode provider name : javassist
+2014-05-05 16:54:29,923}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:835 - HHH000235: Searching for mapping documents in jar: HibernateMapper-1.0-SNAPSHOT.jar
+2014-05-05 16:54:29,924}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDevice.hbm.xml
+2014-05-05 16:54:30,083}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDeviceModel.hbm.xml
+2014-05-05 16:54:30,118}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDeviceVendor.hbm.xml
+2014-05-05 16:54:30,142}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDiagnosis.hbm.xml
+2014-05-05 16:54:30,169}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDiagnostician.hbm.xml
+2014-05-05 16:54:30,195}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsInvoice.hbm.xml
+2014-05-05 16:54:30,237}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsRepair.hbm.xml
+2014-05-05 16:54:30,278}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsSentDevices.hbm.xml
+2014-05-05 16:54:30,303}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsServiceClaimant.hbm.xml
+2014-05-05 16:54:30,324}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsServiceOrder.hbm.xml
+2014-05-05 16:54:30,342}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsTest.hbm.xml
+2014-05-05 16:54:30,359}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsTesting.hbm.xml
+2014-05-05 16:54:30,643}ABSOLUTE{  WARN org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2014-05-05 16:54:30,646}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/mobiledeviceservice?zeroDateTimeBehavior=convertToNull]
+2014-05-05 16:54:30,647}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:175 - HHH000046: Connection properties: {user=root, password=****}
+2014-05-05 16:54:30,648}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:180 - HHH000006: Autocommit mode: false
+2014-05-05 16:54:30,651}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2014-05-05 16:54:30,810}ABSOLUTE{  INFO org.hibernate.dialect.Dialect}1{:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2014-05-05 16:54:30,830}ABSOLUTE{  INFO org.hibernate.engine.jdbc.internal.LobCreatorBuilder}1{:97 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2014-05-05 16:54:31,022}ABSOLUTE{  INFO org.hibernate.engine.transaction.internal.TransactionFactoryInitiator}1{:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2014-05-05 16:54:31,041}ABSOLUTE{  INFO org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory}1{:47 - HHH000397: Using ASTQueryTranslatorFactory
+2014-05-05 16:56:10,088}ABSOLUTE{  INFO org.hibernate.annotations.common.Version}1{:37 - Hibernate Commons Annotations 3.2.0.Final
+2014-05-05 16:56:10,100}ABSOLUTE{  INFO org.hibernate.Version}1{:54 - HHH000412: Hibernate Core {4.3.5.Final}
+2014-05-05 16:56:10,103}ABSOLUTE{  INFO org.hibernate.cfg.Environment}1{:239 - HHH000206: hibernate.properties not found
+2014-05-05 16:56:10,106}ABSOLUTE{  INFO org.hibernate.cfg.Environment}1{:346 - HHH000021: Bytecode provider name : javassist
+2014-05-05 16:56:10,136}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:835 - HHH000235: Searching for mapping documents in jar: HibernateMapper-1.0-SNAPSHOT.jar
+2014-05-05 16:56:10,137}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDevice.hbm.xml
+2014-05-05 16:56:10,345}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDeviceModel.hbm.xml
+2014-05-05 16:56:10,388}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDeviceVendor.hbm.xml
+2014-05-05 16:56:10,414}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDiagnosis.hbm.xml
+2014-05-05 16:56:10,450}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDiagnostician.hbm.xml
+2014-05-05 16:56:10,478}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsInvoice.hbm.xml
+2014-05-05 16:56:10,506}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsRepair.hbm.xml
+2014-05-05 16:56:10,538}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsSentDevices.hbm.xml
+2014-05-05 16:56:10,557}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsServiceClaimant.hbm.xml
+2014-05-05 16:56:10,574}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsServiceOrder.hbm.xml
+2014-05-05 16:56:10,588}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsTest.hbm.xml
+2014-05-05 16:56:10,600}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsTesting.hbm.xml
+2014-05-05 16:56:10,804}ABSOLUTE{  WARN org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2014-05-05 16:56:10,806}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/mobiledeviceservice?zeroDateTimeBehavior=convertToNull]
+2014-05-05 16:56:10,807}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:175 - HHH000046: Connection properties: {user=root, password=****}
+2014-05-05 16:56:10,807}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:180 - HHH000006: Autocommit mode: false
+2014-05-05 16:56:10,809}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2014-05-05 16:56:10,943}ABSOLUTE{  INFO org.hibernate.dialect.Dialect}1{:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2014-05-05 16:56:10,957}ABSOLUTE{  INFO org.hibernate.engine.jdbc.internal.LobCreatorBuilder}1{:97 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2014-05-05 16:56:11,084}ABSOLUTE{  INFO org.hibernate.engine.transaction.internal.TransactionFactoryInitiator}1{:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2014-05-05 16:56:11,092}ABSOLUTE{  INFO org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory}1{:47 - HHH000397: Using ASTQueryTranslatorFactory
+2014-05-05 16:59:56,713}ABSOLUTE{  INFO org.hibernate.annotations.common.Version}1{:37 - Hibernate Commons Annotations 3.2.0.Final
+2014-05-05 16:59:56,733}ABSOLUTE{  INFO org.hibernate.Version}1{:54 - HHH000412: Hibernate Core {4.3.5.Final}
+2014-05-05 16:59:56,737}ABSOLUTE{  INFO org.hibernate.cfg.Environment}1{:239 - HHH000206: hibernate.properties not found
+2014-05-05 16:59:56,741}ABSOLUTE{  INFO org.hibernate.cfg.Environment}1{:346 - HHH000021: Bytecode provider name : javassist
+2014-05-05 16:59:56,779}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:835 - HHH000235: Searching for mapping documents in jar: HibernateMapper-1.0-SNAPSHOT.jar
+2014-05-05 16:59:56,780}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDevice.hbm.xml
+2014-05-05 16:59:56,988}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDeviceModel.hbm.xml
+2014-05-05 16:59:57,034}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDeviceVendor.hbm.xml
+2014-05-05 16:59:57,086}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDiagnosis.hbm.xml
+2014-05-05 16:59:57,162}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDiagnostician.hbm.xml
+2014-05-05 16:59:57,192}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsInvoice.hbm.xml
+2014-05-05 16:59:57,255}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsRepair.hbm.xml
+2014-05-05 16:59:57,281}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsSentDevices.hbm.xml
+2014-05-05 16:59:57,300}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsServiceClaimant.hbm.xml
+2014-05-05 16:59:57,320}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsServiceOrder.hbm.xml
+2014-05-05 16:59:57,346}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsTest.hbm.xml
+2014-05-05 16:59:57,375}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsTesting.hbm.xml
+2014-05-05 16:59:57,739}ABSOLUTE{  WARN org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2014-05-05 16:59:57,742}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/mobiledeviceservice?zeroDateTimeBehavior=convertToNull]
+2014-05-05 16:59:57,743}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:175 - HHH000046: Connection properties: {user=root, password=****}
+2014-05-05 16:59:57,744}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:180 - HHH000006: Autocommit mode: false
+2014-05-05 16:59:57,747}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2014-05-05 16:59:57,914}ABSOLUTE{  INFO org.hibernate.dialect.Dialect}1{:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2014-05-05 16:59:57,933}ABSOLUTE{  INFO org.hibernate.engine.jdbc.internal.LobCreatorBuilder}1{:97 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2014-05-05 16:59:58,108}ABSOLUTE{  INFO org.hibernate.engine.transaction.internal.TransactionFactoryInitiator}1{:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2014-05-05 16:59:58,119}ABSOLUTE{  INFO org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory}1{:47 - HHH000397: Using ASTQueryTranslatorFactory
+2014-05-05 17:00:56,574}ABSOLUTE{  INFO org.hibernate.annotations.common.Version}1{:37 - Hibernate Commons Annotations 3.2.0.Final
+2014-05-05 17:00:56,587}ABSOLUTE{  INFO org.hibernate.Version}1{:54 - HHH000412: Hibernate Core {4.3.5.Final}
+2014-05-05 17:00:56,590}ABSOLUTE{  INFO org.hibernate.cfg.Environment}1{:239 - HHH000206: hibernate.properties not found
+2014-05-05 17:00:56,593}ABSOLUTE{  INFO org.hibernate.cfg.Environment}1{:346 - HHH000021: Bytecode provider name : javassist
+2014-05-05 17:00:56,620}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:835 - HHH000235: Searching for mapping documents in jar: HibernateMapper-1.0-SNAPSHOT.jar
+2014-05-05 17:00:56,621}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDevice.hbm.xml
+2014-05-05 17:00:56,794}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDeviceModel.hbm.xml
+2014-05-05 17:00:56,824}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDeviceVendor.hbm.xml
+2014-05-05 17:00:56,854}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDiagnosis.hbm.xml
+2014-05-05 17:00:56,873}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDiagnostician.hbm.xml
+2014-05-05 17:00:56,893}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsInvoice.hbm.xml
+2014-05-05 17:00:56,911}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsRepair.hbm.xml
+2014-05-05 17:00:56,931}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsSentDevices.hbm.xml
+2014-05-05 17:00:56,948}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsServiceClaimant.hbm.xml
+2014-05-05 17:00:56,965}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsServiceOrder.hbm.xml
+2014-05-05 17:00:56,980}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsTest.hbm.xml
+2014-05-05 17:00:56,994}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsTesting.hbm.xml
+2014-05-05 17:00:57,169}ABSOLUTE{  WARN org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2014-05-05 17:00:57,171}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/mobiledeviceservice?zeroDateTimeBehavior=convertToNull]
+2014-05-05 17:00:57,172}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:175 - HHH000046: Connection properties: {user=root, password=****}
+2014-05-05 17:00:57,173}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:180 - HHH000006: Autocommit mode: false
+2014-05-05 17:00:57,175}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2014-05-05 17:00:57,288}ABSOLUTE{  INFO org.hibernate.dialect.Dialect}1{:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2014-05-05 17:00:57,304}ABSOLUTE{  INFO org.hibernate.engine.jdbc.internal.LobCreatorBuilder}1{:97 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2014-05-05 17:00:57,416}ABSOLUTE{  INFO org.hibernate.engine.transaction.internal.TransactionFactoryInitiator}1{:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2014-05-05 17:00:57,427}ABSOLUTE{  INFO org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory}1{:47 - HHH000397: Using ASTQueryTranslatorFactory
+2014-05-05 17:02:06,467}ABSOLUTE{  INFO org.hibernate.annotations.common.Version}1{:37 - Hibernate Commons Annotations 3.2.0.Final
+2014-05-05 17:02:06,486}ABSOLUTE{  INFO org.hibernate.Version}1{:54 - HHH000412: Hibernate Core {4.3.5.Final}
+2014-05-05 17:02:06,490}ABSOLUTE{  INFO org.hibernate.cfg.Environment}1{:239 - HHH000206: hibernate.properties not found
+2014-05-05 17:02:06,492}ABSOLUTE{  INFO org.hibernate.cfg.Environment}1{:346 - HHH000021: Bytecode provider name : javassist
+2014-05-05 17:02:06,520}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:835 - HHH000235: Searching for mapping documents in jar: HibernateMapper-1.0-SNAPSHOT.jar
+2014-05-05 17:02:06,521}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDevice.hbm.xml
+2014-05-05 17:02:06,692}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDeviceModel.hbm.xml
+2014-05-05 17:02:06,719}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDeviceVendor.hbm.xml
+2014-05-05 17:02:06,743}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDiagnosis.hbm.xml
+2014-05-05 17:02:06,766}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDiagnostician.hbm.xml
+2014-05-05 17:02:06,788}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsInvoice.hbm.xml
+2014-05-05 17:02:06,807}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsRepair.hbm.xml
+2014-05-05 17:02:06,829}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsSentDevices.hbm.xml
+2014-05-05 17:02:06,847}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsServiceClaimant.hbm.xml
+2014-05-05 17:02:06,866}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsServiceOrder.hbm.xml
+2014-05-05 17:02:06,884}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsTest.hbm.xml
+2014-05-05 17:02:06,898}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsTesting.hbm.xml
+2014-05-05 17:02:07,097}ABSOLUTE{  WARN org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2014-05-05 17:02:07,100}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/mobiledeviceservice?zeroDateTimeBehavior=convertToNull]
+2014-05-05 17:02:07,100}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:175 - HHH000046: Connection properties: {user=root, password=****}
+2014-05-05 17:02:07,101}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:180 - HHH000006: Autocommit mode: false
+2014-05-05 17:02:07,103}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2014-05-05 17:02:07,225}ABSOLUTE{  INFO org.hibernate.dialect.Dialect}1{:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2014-05-05 17:02:07,247}ABSOLUTE{  INFO org.hibernate.engine.jdbc.internal.LobCreatorBuilder}1{:97 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2014-05-05 17:02:07,404}ABSOLUTE{  INFO org.hibernate.engine.transaction.internal.TransactionFactoryInitiator}1{:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2014-05-05 17:02:07,438}ABSOLUTE{  INFO org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory}1{:47 - HHH000397: Using ASTQueryTranslatorFactory
+2014-05-05 17:04:33,600}ABSOLUTE{  INFO org.hibernate.annotations.common.Version}1{:37 - Hibernate Commons Annotations 3.2.0.Final
+2014-05-05 17:04:33,619}ABSOLUTE{  INFO org.hibernate.Version}1{:54 - HHH000412: Hibernate Core {4.3.5.Final}
+2014-05-05 17:04:33,622}ABSOLUTE{  INFO org.hibernate.cfg.Environment}1{:239 - HHH000206: hibernate.properties not found
+2014-05-05 17:04:33,626}ABSOLUTE{  INFO org.hibernate.cfg.Environment}1{:346 - HHH000021: Bytecode provider name : javassist
+2014-05-05 17:04:33,653}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:835 - HHH000235: Searching for mapping documents in jar: HibernateMapper-1.0-SNAPSHOT.jar
+2014-05-05 17:04:33,654}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDevice.hbm.xml
+2014-05-05 17:04:33,822}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDeviceModel.hbm.xml
+2014-05-05 17:04:33,849}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDeviceVendor.hbm.xml
+2014-05-05 17:04:33,885}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDiagnosis.hbm.xml
+2014-05-05 17:04:33,909}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDiagnostician.hbm.xml
+2014-05-05 17:04:33,939}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsInvoice.hbm.xml
+2014-05-05 17:04:33,964}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsRepair.hbm.xml
+2014-05-05 17:04:33,991}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsSentDevices.hbm.xml
+2014-05-05 17:04:34,015}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsServiceClaimant.hbm.xml
+2014-05-05 17:04:34,036}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsServiceOrder.hbm.xml
+2014-05-05 17:04:34,074}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsTest.hbm.xml
+2014-05-05 17:04:34,094}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsTesting.hbm.xml
+2014-05-05 17:04:34,345}ABSOLUTE{  WARN org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2014-05-05 17:04:34,347}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/mobiledeviceservice?zeroDateTimeBehavior=convertToNull]
+2014-05-05 17:04:34,347}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:175 - HHH000046: Connection properties: {user=root, password=****}
+2014-05-05 17:04:34,348}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:180 - HHH000006: Autocommit mode: false
+2014-05-05 17:04:34,351}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2014-05-05 17:04:34,498}ABSOLUTE{  INFO org.hibernate.dialect.Dialect}1{:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2014-05-05 17:04:34,518}ABSOLUTE{  INFO org.hibernate.engine.jdbc.internal.LobCreatorBuilder}1{:97 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2014-05-05 17:04:34,675}ABSOLUTE{  INFO org.hibernate.engine.transaction.internal.TransactionFactoryInitiator}1{:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2014-05-05 17:04:34,688}ABSOLUTE{  INFO org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory}1{:47 - HHH000397: Using ASTQueryTranslatorFactory
+2014-05-05 17:07:18,120}ABSOLUTE{  INFO org.hibernate.annotations.common.Version}1{:37 - Hibernate Commons Annotations 3.2.0.Final
+2014-05-05 17:07:18,139}ABSOLUTE{  INFO org.hibernate.Version}1{:54 - HHH000412: Hibernate Core {4.3.5.Final}
+2014-05-05 17:07:18,143}ABSOLUTE{  INFO org.hibernate.cfg.Environment}1{:239 - HHH000206: hibernate.properties not found
+2014-05-05 17:07:18,145}ABSOLUTE{  INFO org.hibernate.cfg.Environment}1{:346 - HHH000021: Bytecode provider name : javassist
+2014-05-05 17:07:18,178}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:835 - HHH000235: Searching for mapping documents in jar: HibernateMapper-1.0-SNAPSHOT.jar
+2014-05-05 17:07:18,179}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDevice.hbm.xml
+2014-05-05 17:07:18,376}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDeviceModel.hbm.xml
+2014-05-05 17:07:18,415}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDeviceVendor.hbm.xml
+2014-05-05 17:07:18,441}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDiagnosis.hbm.xml
+2014-05-05 17:07:18,462}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDiagnostician.hbm.xml
+2014-05-05 17:07:18,483}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsInvoice.hbm.xml
+2014-05-05 17:07:18,503}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsRepair.hbm.xml
+2014-05-05 17:07:18,525}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsSentDevices.hbm.xml
+2014-05-05 17:07:18,545}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsServiceClaimant.hbm.xml
+2014-05-05 17:07:18,564}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsServiceOrder.hbm.xml
+2014-05-05 17:07:18,580}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsTest.hbm.xml
+2014-05-05 17:07:18,595}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsTesting.hbm.xml
+2014-05-05 17:07:18,786}ABSOLUTE{  WARN org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2014-05-05 17:07:18,790}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/mobiledeviceservice?zeroDateTimeBehavior=convertToNull]
+2014-05-05 17:07:18,790}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:175 - HHH000046: Connection properties: {user=root, password=****}
+2014-05-05 17:07:18,791}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:180 - HHH000006: Autocommit mode: false
+2014-05-05 17:07:18,793}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2014-05-05 17:07:18,931}ABSOLUTE{  INFO org.hibernate.dialect.Dialect}1{:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2014-05-05 17:07:18,945}ABSOLUTE{  INFO org.hibernate.engine.jdbc.internal.LobCreatorBuilder}1{:97 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2014-05-05 17:07:19,076}ABSOLUTE{  INFO org.hibernate.engine.transaction.internal.TransactionFactoryInitiator}1{:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2014-05-05 17:07:19,089}ABSOLUTE{  INFO org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory}1{:47 - HHH000397: Using ASTQueryTranslatorFactory
+2014-05-05 17:10:53,986}ABSOLUTE{  INFO org.hibernate.annotations.common.Version}1{:37 - Hibernate Commons Annotations 3.2.0.Final
+2014-05-05 17:10:53,998}ABSOLUTE{  INFO org.hibernate.Version}1{:54 - HHH000412: Hibernate Core {4.3.5.Final}
+2014-05-05 17:10:54,002}ABSOLUTE{  INFO org.hibernate.cfg.Environment}1{:239 - HHH000206: hibernate.properties not found
+2014-05-05 17:10:54,004}ABSOLUTE{  INFO org.hibernate.cfg.Environment}1{:346 - HHH000021: Bytecode provider name : javassist
+2014-05-05 17:10:54,032}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:835 - HHH000235: Searching for mapping documents in jar: HibernateMapper-1.0-SNAPSHOT.jar
+2014-05-05 17:10:54,034}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDevice.hbm.xml
+2014-05-05 17:10:54,200}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDeviceModel.hbm.xml
+2014-05-05 17:10:54,224}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDeviceVendor.hbm.xml
+2014-05-05 17:10:54,248}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDiagnosis.hbm.xml
+2014-05-05 17:10:54,267}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDiagnostician.hbm.xml
+2014-05-05 17:10:54,293}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsInvoice.hbm.xml
+2014-05-05 17:10:54,314}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsRepair.hbm.xml
+2014-05-05 17:10:54,334}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsSentDevices.hbm.xml
+2014-05-05 17:10:54,354}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsServiceClaimant.hbm.xml
+2014-05-05 17:10:54,370}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsServiceOrder.hbm.xml
+2014-05-05 17:10:54,390}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsTest.hbm.xml
+2014-05-05 17:10:54,414}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsTesting.hbm.xml
+2014-05-05 17:10:54,574}ABSOLUTE{  WARN org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2014-05-05 17:10:54,576}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/mobiledeviceservice?zeroDateTimeBehavior=convertToNull]
+2014-05-05 17:10:54,576}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:175 - HHH000046: Connection properties: {user=root, password=****}
+2014-05-05 17:10:54,577}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:180 - HHH000006: Autocommit mode: false
+2014-05-05 17:10:54,579}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2014-05-05 17:10:54,696}ABSOLUTE{  INFO org.hibernate.dialect.Dialect}1{:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2014-05-05 17:10:54,709}ABSOLUTE{  INFO org.hibernate.engine.jdbc.internal.LobCreatorBuilder}1{:97 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2014-05-05 17:10:54,813}ABSOLUTE{  INFO org.hibernate.engine.transaction.internal.TransactionFactoryInitiator}1{:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2014-05-05 17:10:54,823}ABSOLUTE{  INFO org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory}1{:47 - HHH000397: Using ASTQueryTranslatorFactory
+2014-05-05 17:11:19,935}ABSOLUTE{  INFO org.hibernate.annotations.common.Version}1{:37 - Hibernate Commons Annotations 3.2.0.Final
+2014-05-05 17:11:19,950}ABSOLUTE{  INFO org.hibernate.Version}1{:54 - HHH000412: Hibernate Core {4.3.5.Final}
+2014-05-05 17:11:19,953}ABSOLUTE{  INFO org.hibernate.cfg.Environment}1{:239 - HHH000206: hibernate.properties not found
+2014-05-05 17:11:19,956}ABSOLUTE{  INFO org.hibernate.cfg.Environment}1{:346 - HHH000021: Bytecode provider name : javassist
+2014-05-05 17:11:19,987}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:835 - HHH000235: Searching for mapping documents in jar: HibernateMapper-1.0-SNAPSHOT.jar
+2014-05-05 17:11:19,988}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDevice.hbm.xml
+2014-05-05 17:11:20,162}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDeviceModel.hbm.xml
+2014-05-05 17:11:20,195}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDeviceVendor.hbm.xml
+2014-05-05 17:11:20,221}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDiagnosis.hbm.xml
+2014-05-05 17:11:20,242}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDiagnostician.hbm.xml
+2014-05-05 17:11:20,266}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsInvoice.hbm.xml
+2014-05-05 17:11:20,288}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsRepair.hbm.xml
+2014-05-05 17:11:20,313}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsSentDevices.hbm.xml
+2014-05-05 17:11:20,335}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsServiceClaimant.hbm.xml
+2014-05-05 17:11:20,351}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsServiceOrder.hbm.xml
+2014-05-05 17:11:20,368}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsTest.hbm.xml
+2014-05-05 17:11:20,382}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsTesting.hbm.xml
+2014-05-05 17:11:20,577}ABSOLUTE{  WARN org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2014-05-05 17:11:20,579}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/mobiledeviceservice?zeroDateTimeBehavior=convertToNull]
+2014-05-05 17:11:20,580}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:175 - HHH000046: Connection properties: {user=root, password=****}
+2014-05-05 17:11:20,580}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:180 - HHH000006: Autocommit mode: false
+2014-05-05 17:11:20,582}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2014-05-05 17:11:20,711}ABSOLUTE{  INFO org.hibernate.dialect.Dialect}1{:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2014-05-05 17:11:20,726}ABSOLUTE{  INFO org.hibernate.engine.jdbc.internal.LobCreatorBuilder}1{:97 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2014-05-05 17:11:20,861}ABSOLUTE{  INFO org.hibernate.engine.transaction.internal.TransactionFactoryInitiator}1{:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2014-05-05 17:11:20,874}ABSOLUTE{  INFO org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory}1{:47 - HHH000397: Using ASTQueryTranslatorFactory
+2014-05-05 17:14:37,123}ABSOLUTE{  INFO org.hibernate.annotations.common.Version}1{:37 - Hibernate Commons Annotations 3.2.0.Final
+2014-05-05 17:14:37,136}ABSOLUTE{  INFO org.hibernate.Version}1{:54 - HHH000412: Hibernate Core {4.3.5.Final}
+2014-05-05 17:14:37,139}ABSOLUTE{  INFO org.hibernate.cfg.Environment}1{:239 - HHH000206: hibernate.properties not found
+2014-05-05 17:14:37,141}ABSOLUTE{  INFO org.hibernate.cfg.Environment}1{:346 - HHH000021: Bytecode provider name : javassist
+2014-05-05 17:14:37,173}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:835 - HHH000235: Searching for mapping documents in jar: HibernateMapper-1.0-SNAPSHOT.jar
+2014-05-05 17:14:37,174}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDevice.hbm.xml
+2014-05-05 17:14:37,354}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDeviceModel.hbm.xml
+2014-05-05 17:14:37,386}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDeviceVendor.hbm.xml
+2014-05-05 17:14:37,411}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDiagnosis.hbm.xml
+2014-05-05 17:14:37,438}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsDiagnostician.hbm.xml
+2014-05-05 17:14:37,468}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsInvoice.hbm.xml
+2014-05-05 17:14:37,489}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsRepair.hbm.xml
+2014-05-05 17:14:37,516}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsSentDevices.hbm.xml
+2014-05-05 17:14:37,541}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsServiceClaimant.hbm.xml
+2014-05-05 17:14:37,564}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsServiceOrder.hbm.xml
+2014-05-05 17:14:37,584}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsTest.hbm.xml
+2014-05-05 17:14:37,604}ABSOLUTE{  INFO org.hibernate.cfg.Configuration}1{:851 - HHH000109: Found mapping document in jar: sk/mathis/stuba/hibernatemapper/MdsTesting.hbm.xml
+2014-05-05 17:14:37,887}ABSOLUTE{  WARN org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2014-05-05 17:14:37,890}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/mobiledeviceservice?zeroDateTimeBehavior=convertToNull]
+2014-05-05 17:14:37,891}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:175 - HHH000046: Connection properties: {user=root, password=****}
+2014-05-05 17:14:37,891}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:180 - HHH000006: Autocommit mode: false
+2014-05-05 17:14:37,894}ABSOLUTE{  INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl}1{:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2014-05-05 17:14:38,047}ABSOLUTE{  INFO org.hibernate.dialect.Dialect}1{:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2014-05-05 17:14:38,067}ABSOLUTE{  INFO org.hibernate.engine.jdbc.internal.LobCreatorBuilder}1{:97 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2014-05-05 17:14:38,225}ABSOLUTE{  INFO org.hibernate.engine.transaction.internal.TransactionFactoryInitiator}1{:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2014-05-05 17:14:38,235}ABSOLUTE{  INFO org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory}1{:47 - HHH000397: Using ASTQueryTranslatorFactory
